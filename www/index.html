@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- <script language="javascript">
+  $(document).ready(function() {
+    theWidth = $(".imagePanel img").css('width');
+    $(".imagePanel").css('width',theWidth);
+});
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+</script> -->
+
+	<style>
+	* {
+		width:100%;
+	    margin:auto;
+		padding-left:0px;
+		padding-right:0px;
+		margin: 0;
+		border: none;
+		list-style-type: none;
+		font-size: large;
+	}
+	
+	.accordion {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+		margin:auto;
+	    border:1px solid #ccc;
+		height:auto;
+		text-align:justify;
+		/*text-wrap:unrestricted;*/
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+	}
+	
+	.accordion a{
+		text-align:center;
+		color:#000;
+		text-decoration:underline;
+	}
+	
+	.accordion2 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		width:50%;
+		text-align:center;		
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#000;
+		color:#FFF;
+		text-shadow:#666;
+		/*text-wrap:suppress;*/
+	}
+	
+	.accordion3 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#660000;
+		color:#FFF;
+		text-shadow:#666;
+	}
+	
+	
+	.imagePanel {
+		margin-left:7%;
+		margin-right:7%;
+		margin-top:7%;
+		margin-bottom:7%;
+		text-align:center;
+		width:35%;
+		float:left;
+		
+	}
+	.imagePanel img { 
+	} 
+	.imagePanel p {
+	}    
+	.imagepanel a {
+		word-break:break-all;
+		
+	}
+	
+	.imagePanel2 {
+    	margin: auto;
+		width:100%;
+	}
+	.imagePanel2 img { 
+	} 
+	.imagePanel2 p {
+	}    
+	.imagepanel2 a {
+		
+		word-break:break-all;
+		
+	}
+	
+	.accordion .acc-content {
+		margin:auto;
+	    height: 0;
+	    overflow: hidden;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		padding-left:5px;
+		padding-right:5px;
+		width:95%;
+		word-wrap:break-word;
+	}
+	
+	.accordion .acc-content2 {
+		margin:auto;
+		width:95%;
+		text-align:left;
+		display: block;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#000;
+		font-weight: normal;
+		font-size: large;
+	}
+	
+	.linkers a
+	{
+		text-align:left;
+		color:#000;
+		font-weight:normal;
+		font-size: large;
+		text-decoration:underline;
+	}
+
+	
+	
+	.accordion li:target .acc-content {
+		margin:auto;
+	    height: auto;
+	    padding:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		background-color:#FFF;
+		padding-left:5px;
+		padding-right:5px;
+		text-wrap:unrestricted;
+
+	}
+	.accordion .acc-header a {
+		width:100%;
+		text-align:left;
+		display: block;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#CCC;
+		/*text-shadow: 1px 1px 1px #000;*/
+		font-weight: bold;
+		font-size: large;
+		border-bottom: 1px solid #aaa;
+		background:#000;
+		text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}
+	
+	.accordion .acc-header2 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#000;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#6A9571;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header2 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header3 a {
+		width:100%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#600;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header3 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header4 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration:underline;
+	color:#000;
+	
+	font-weight:normal;
+	font-size: large;
+	
+	/*text-indent:10px;*/
+	
+	}
+
+	
+	</style>
+
+  </head>
+ 
+ <body id="homepage">
+ 	
+  	<div class="accordion" id="sancharfirstlogo"><a href="index.html"><img src="assets/images/sancharfirst_logoN.jpg" width="100%" alt="sancharFirst Logo"></a></div>
+  	<div class="imagePanel2" id="qr"><img src="assets/images/quickrev.jpg" alt="QUICKREV SERIES"></div>
+  	<div class="accordion">
+    	<ul>
+        	<li class="acc-header3" id="mediath"> 
+		        <a href="#">Communication and Media Theories</a>
+		        <div class="acc-content">
+				</div>
+         	</li>
+        </ul>
+     </div>
+        
+    <div class="accordion">
+   	<div class="imagePanel"><a href="early.html"><img src="assets/images/early.jpg" alt="Early"></a><a href="early.html">Early theories, models</a></div>
+    <div class="imagePanel"><a href="communication.html"><img src="assets/images/communicate.jpg" alt="Communication"></a><a href="communication.html">Communication - Some basic concepts</a></div>
+   	<div class="imagePanel"><a href="media.html"><img src="assets/images/whatmediadoes.jpg" alt="Media"></a><a href="media.html">Media - What does it do?</a></div>
+ 	<div class="imagePanel"><a href="audiences.html"><img src="assets/images/audiences.jpg" alt="Audiences"></a><a href="audiences.html">Audiences - Society and Culture</a></div>
+  	<div class="imagePanel"><a href="effects.html"><img src="assets/images/mediaeffects.jpg" alt="Effects"></a><a href="effects.html">Media Effects </a></div>
+    <div class="imagePanel"><a href="organization.html"><img src="assets/images/org.jpg" alt="Organization"></a><a href="organization.html">Communication in Organizations</a></div>
+    <div class="imagePanel"><a href="a2z.html"><img src="assets/images/a2z.jpg" alt="Alphabetical"></a><a href="a2z.html" target="_blank">All theories - Alphabetically arranged</a></div>
+	<div class="imagePanel"><a href="faq.html"><img src="assets/images/faqs.jpg" alt="FAQs"></a><a href="faq.html" target="_blank">Frequently Asked Questions</a></div>
+    <div class="accordion" id="aboutus"><a href="about.html"><img src="assets/images/aboutedusanchar.jpg" width="100%" alt="About EduSanchar"></a></div>
+    <div class="accordion" id="aboutmmk"><a href="http://www.karandikars.com/" target="_blank"><img src="assets/images/aboutedusanchar.jpg" width="100%" alt="About the Developer"></a></div>
+    </div>
+  	<input type="button" id="logout-btn" value="Logout">
+    <script>
+    window.onload = function () {
+    	console.log(localStorage.getItem('logged_in_already'));
+        // if not logged in go to login page, else stay!
+        if (localStorage.getItem('logged_in_already') == false || localStorage.getItem('logged_in_already') == null) {
+            return window.location = window.location.toString().replace('index.html', 'login.html');
+        }
+        document.getElementById('logout-btn').addEventListener('click', function () {
+            localStorage.removeItem('logged_in_already');
+            window.location = window.location.toString().replace('index.html', 'login.html');
+        });
+    }
+    </script>
+
+  </body>
+</html>

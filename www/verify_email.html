@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/jquery-3.4.1.min.js"></script>
+    <title>User Login Page</title>
+</head>
+
+<body>
+    <div class="header">
+        <h2>Verify your account</h2>
+    </div>
+    <p class="error">
+        <!-- error messages will appear here -->
+    </p>
+    <div style="background: lightgreen; width: 90%; margin: auto; padding: 0 22px; font-size: 15px;">
+        <p>
+            We have sent verification pin to your email <span style="color: red;">
+                <script>document.write(localStorage.getItem('email'))</script></span>
+            <br>
+            <br>
+            <!-- <span>You did not get email? click <span id="resend-email"
+                    style="color: blue; text-decoration: underline;">here</span> to resend email.</span> -->
+        </p>
+    </div>
+
+    <form action="http://metmedia.org/auth-app/verify_email_api.php" method="post">
+        <div class="input-group">
+            <label for="">Enter verification pin</label>
+            <input type="text" name="pinCode" id="pinCode" required>
+        </div>
+        <div class="input-group">
+            <input type="submit" value="Verify" class="submit-btn" name="verify_email_page">
+        </div>
+        <p>
+
+            Already verified your account? <a href="login.html">Login</a> instead.
+        </p>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            // // resend email using ajax
+            // $('#resend-email').click(function () {
+            //     $.ajax({
+            //         type: 'post',
+            //         url: 'http://185.210.146.112/auth-app/verify_email_api.php',
+            //         data: {
+            //             email: localStorage.getItem('email'),
+            //             name: localStorage.getItem('name'),
+            //             resend_email_page: true,
+            //         },
+            //         success: function (res, status) {
+            //             var currentWindow = window.location
+            //             var res = $.parseJSON(res);
+
+            //             if (res.correct_pin == true) {
+            //                 console.log("correct pin: " + res.correct_pin + "\nStatus: " + status);
+            //                 window.location = currentWindow.toString().replace('verify_email.html', 'login.html');
+            //             }
+            //         }
+            //     });
+            // });
+
+            // submit login form with ajax
+            $('form').submit(function (event) {
+                /* stop form from submitting normally */
+                event.preventDefault();
+                    $.ajax({
+                        type: 'post',
+                        url: 'http://metmedia.org/auth-app/verify_email_api.php',
+                        data: {
+                            pinCode: $('#pinCode').val(),
+                            email: localStorage.getItem('email'),
+                            verify_email_page: true,
+                        },
+                        success: function (res, status) {
+                            var currentWindow = window.location
+                            var res = $.parseJSON(res);
+
+                            console.log('response: ', res);
+
+                            if (res.correct_pin == true) {
+                                window.location = currentWindow.toString().replace('verify_email.html', 'login.html');
+                            }
+
+                            // if email is not verified
+                            if (res.correct_pin == false) {
+                                localStorage.setItem('userId', res.userId)
+                                // show error
+                                if ($('.error').css('visibility') == 'hidden') {
+                                    $('.error').css({ 'visibility': 'visible' }).prepend('You have entered wrong pin');
+                                }
+                            }
+                        }
+                    });
+            });
+        });
+    </script>
+</body>
+
+</html>

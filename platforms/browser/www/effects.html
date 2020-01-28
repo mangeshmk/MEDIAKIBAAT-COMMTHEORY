@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script language="javascript">
+  $(document).ready(function() {
+    theWidth = $(".imagePanel img").css('width');
+    $(".imagePanel").css('width',theWidth);
+});
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+</script>
+
+	<style>
+	* {
+		width:100%;
+	    margin:auto;
+		padding-left:0px;
+		padding-right:0px;
+		margin: 0;
+		border: none;
+		list-style-type: none;
+		font-size: large;
+	}
+	
+	.accordion {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+		margin:auto;
+	    border:1px solid #ccc;
+		height:auto;
+		text-align:justify;
+		/*text-wrap:unrestricted;*/
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		/* background-color:#FFF;	*/
+	
+	}
+	
+	.accordion2 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;		
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#000;
+		color:#FFF;
+		text-shadow:#666;
+		/*text-wrap:suppress;*/
+	}
+	
+	.accordion3 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#660000;
+		color:#FFF;
+		text-shadow:#666;
+	}
+	
+	
+	.imagePanel {
+    	margin: auto;
+		width:65%;
+	}
+	.imagePanel img { 
+	} 
+	.imagePanel p {
+	}    
+	.imagepanel a {
+		word-break:break-all;
+		
+	}
+	
+	.imagePanel2 {
+    	margin: auto;
+		width:100%;
+	}
+	.imagePanel2 img { 
+	} 
+	.imagePanel2 p {
+	}    
+	.imagepanel2 a {
+		
+		word-break:break-all;
+		
+	}
+	
+	.accordion .acc-content {
+		margin:auto;
+	    height: 0;
+	    overflow: hidden;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		padding-left:5px;
+		padding-right:5px;
+		width:95%;
+		word-wrap:break-word;
+	}
+	
+	.accordion .acc-content2 {
+		margin:auto;
+		width:95%;
+		text-align:left;
+		display: block;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#000;
+		font-weight: normal;
+		font-size: large;
+	}
+	
+	.linkers a
+	{
+		text-align:left;
+		color:#000;
+		font-weight:normal;
+		font-size: large;
+		text-decoration:underline;
+	}
+
+	
+	
+	.accordion li:target .acc-content {
+		margin:auto;
+	    height: auto;
+	    padding:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		background-color:#FFF;
+		padding-left:5px;
+		padding-right:5px;
+		text-wrap:unrestricted;
+
+	}
+	.accordion .acc-header a {
+		width:100%;
+		text-align:left;
+		display: block;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#CCC;
+		/*text-shadow: 1px 1px 1px #000;*/
+		font-weight: bold;
+		font-size: large;
+		border-bottom: 1px solid #aaa;
+		background:#000;
+		text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}
+	
+	.accordion .acc-header2 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#000;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#6A9571;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header2 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header3 a {
+		width:100%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#600;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header3 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header4 a {
+		width:100%;
+		text-align:left
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration:underline;
+	color:#000;
+	
+	font-weight:normal;
+	font-size: large;
+	
+	/*text-indent:10px;*/
+	
+	}
+
+	.accordion .acc-header5 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#300;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header5 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	body {
+	background-color: #300;
+}
+</style>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
+  <body id="homepage">
+  <div class="accordion2" id="sancharfirstlogo"><a href="index.html"><img src="assets/images/sancharfirst_logoN.jpg" width="100%" alt="sancharFirst Logo"></a></div>
+  <div class="imagePanel2" id="qr"><img src="assets/images/quickrev.jpg" alt="QUICKREV SERIES"></div>
+  <div class="accordion">
+    	<ul>
+        	<li class="acc-header3" id="medeff"> 
+		        <a href="#mededd">Media Effects</a>
+		        <div class="acc-content">
+				</div>
+         	</li>
+            
+            
+            <li class="acc-header" id="hypo"> 
+		        <a href="#hypo">Hypodermic Needle Theory</a>
+		        <div class="acc-content">
+                	<div class="imagePanel"><img src="assets/images/hypodermic.jpg" alt="Hypodermic Needle Theory" ></div>
+		          <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> The theory dates back to the advent of mass media in the 1930s and was the result of mass perceptions rather than being based in scientific or empirical studies </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Development:</strong> The theory is also known as 'Direct Response' theory, or the 'Magic Bullet' theory. Far from being established, the Hypodermic Needle Theory was disproved through various studies, and is considered redundant today. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Perhaps the most dramatic of the media effects theories, the Hypodermic Needle Theory literally draws from the mental image of a needle being injected directly into an individual's brain or a bullet being shot straight into the head. The theory, thus proposes that the mass media, has a similar effect on people where media messages had a direct, inescapable impact on a largely passive audience. </p>
+			        <p>&nbsp;</p>
+			        <p>Critique of the Theory: Paul Lazarsfeld led a study in 1944 during the American Presidential election to determine whether media messages of the campaign had any impact on voters. The study found the media had no impact whatever on voters' decision on who they voted for. This study effectively disproved the Hypodermic Needle Theory.</p>
+		          <p>&nbsp;</p>
+		          <p><strong>Further reading:</strong>                    
+			        <p><br>
+			          <a href"http://en.wikipedia.org/wiki/Hypodermic_needle_model" target="_blank">Link 1</a><br><br>
+			          <a href"http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Mass%20Media/Hypodermic_Needle_Theory.doc/" target="_blank">Link 2</a><br><br>
+			          <a href"http://www.youtube.com/watch?v=Qt5MjBlvGcY" target="_blank">Link 3</a><br><br>
+			          <a href"http://communicationtheory.org/magic-bullet-or-hypodermic-needle-theory-of-communication/" target="_blank">Link 4</a><br><br>
+		          <p>&nbsp;</p>
+              </div>
+	      </li>
+          
+          
+            <li class="acc-header2" id="pt"> 
+		        <a href="#pt">Propaganda Theories </a>
+		        <div class="acc-content">
+                <div class="imagePanel2"><img src="assets/images/propaganda.png" width="75%" alt="Propaganda"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Walter Lippman, Harold Lasswell, Jacques Ellul and Edward Bernays were the earliest theorists to propound propaganda theories in the early 1900s. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Propaganda is a mass communication tool that is used to influence mass opinion. The idea of propaganda took on a negative connotation during World War II with the German dictator Adolf Hitler using it extensively to propagate Nazi ideology.   Propaganda uses loaded messages ostensibly to produce emotional, rather than rational, response from a people. It is a method or approach to spread ideas that further either a political, commercial, religious or civil cause. </p>
+			        <p>&nbsp;</p>
+			        <p>Lippman was of the view that in order to conduct propaganda there must be some barrier between the public and the event, which is where the media comes in to manipulate events by presenting limited information to the public and creating a pseudo environment.   </p>
+			        <p>&nbsp;</p>
+			        <p>There are three types of propaganda: <br>
+		            1) White Propaganda, where information comes from a known source; <br>
+		            2) Grey Propaganda, where the source of information is not identified; <br>
+		            3) Black Propaganda, where information appears to come from one source when it actually comes from another.   </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance</strong>: Propaganda is most commonly used through various forms of media by governments to convince the public about welfare schemes, policies or new legislation. Propaganda is also used to spread religious ideologies; for marketing new lifestyle products.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading:</strong></p>
+                    <p>&nbsp;</p>
+               	  <a href="http://en.wikibooks.org/wiki/Communication_Theory/Propaganda_and_the_Public" target="_blank">Link 1</a><br>
+               	  <a href="http://www.zeepedia.com/read.php?propaganda_theories_origin_of_propaganda_engineering_of_consent_behaviorism_theories_of_communication&b=81&c=10" target="_blank">Link 2</a><br>
+               	  <a href="http://www.propagandatheory.com/" target="_blank">Link 3</a><br>
+               	  <a href="http://www.chomsky.info/onchomsky/20031209.htm" target="_blank">Link 4</a><br>
+               	  <a href="http://www.chomsky.info/onchomsky/20031209.htm" target="_blank">Link 5</a><br>
+               	  <a href="http://www.academia.edu/819415/The_Propaganda_Model_Theoretical_and_Methodological_Considerations" target="_blank">Link 6</a><br>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="uandg"> 
+		        <a href="#uandg">Uses and Gratifications Theory </a>
+		        <div class="acc-content">
+               	  <div class="imagePanel"><img src="assets/images/katzblumler.png" alt="Jay Blumler and Elihu Katz" ></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Elihu Katz and Blumler formalized the theory in 1974 although the basis for this media effects theory can be found in theories as far back as the 1940s. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Theory Explanation: </strong>This is one of the important media theories at it is one of the first concepts to involve the audiences in its study. The Uses and Gratifications Theory says that far from being passive, mass media users are active users of media; they expect to see what they want to see while discarding whatever is of no use to them. The theory emphasizes a limited effect position, which says people use and choose certain media forms over others, and are able to exercise control over their media.</p>
+			        <p>&nbsp;</p>
+			        <p>The theory further says that audience uses the media to fulfill five basic needs: </p>
+			        <p>(1) Cognitive (you choose the medium that gratifies you the most); </p>
+			        <p>(2) Affective needs (satisfying emotions, pleasure, etc); </p>
+			        <p>(3) Personal integrative needs (for social status, credibility, etc.); </p>
+			        <p>(4) Social integrative needs (time spent with family and friends); and </p>
+			        <p>(5) Tension Release needs (to escape or divert mind from every day tensions). </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Critique of Theory:</strong> Critics say this theory lets the media off the hook without making it accountable by saying it serves the audience what it wants. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> Applies to all media effects research </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Uses_and_gratifications_theory" target="_blank">Link 1</a><br>
+					<a href="http://www.aber.ac.uk/media/Documents/short/usegrat.html" target="_blank">Link 2</a><br>
+					<a href="https://umdrive.memphis.edu/cbrown14/public/Mass%20Comm%20Theory/Week%207%20Uses%20and%20Gratifications/Ruggiero.pdf" target="_blank">Link 3</a><br>
+					<a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Mass%20Media/Uses_and_Gratifications_Approach.doc/" target="_blank">Link 4</a><br>
+                    <p>&nbsp;</p>
+		        </div>
+		    </li>
+     
+     
+            
+            <li class="acc-header2" id="sleeper"> 
+		        <a href="#sleeper">The Sleeper Effect  </a>
+		        <div class="acc-content">
+                <div class="imagePanel2"><img src="assets/images/sleepereffect.jpg" alt="Sleeper Effect"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Sleeper Effect was identified in the 1930s, but its related concepts were talked about in detail by Carl Hovland and others in 1949.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Concept Explanation:</strong> The Sleeper Effect is a psychological phenomenon that comes into play when people are confronted with propaganda.  The concept is that people tend to not believe certain messages or information because of the low credibility of the source, but over time they forget the source and start believing the message, even if it is not true.  That delayed impact of the message is called the Sleeper Effect; and the low-credibility source is called a Discounting Cue. </p>
+		          <p>&nbsp;</p>
+			        <p>Thus, a persuasive message, paired with a discounting cue, causes an individual to be more persuaded by the message over time even if it was dismissed off initially. Further studies showed that people tended to “forget” the discounting cue over time and “dissociated” themselves from the message because of the eventual “differential decay” of the cue over time. This is because the impact of the cue decays faster than the impact of the message when the cue follows the message rather than precede it.</p>
+		          <p>&nbsp;</p>
+                    <p><strong>Further reading: </strong></p>
+                    <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Sleeper_effect" target="_blank">Link 1</a><br>
+	          		<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3100161/" target="_blank">Link 2</a><br>
+	          		<a href="http://lifehacker.com/5707484/persuasion-the-sleeper-effect" target="_blank">Link 3</a><br>
+	          		<a href="http://www.jstor.org/discover/10.2307/2488970?uid=3738256&uid=2129&uid=2&uid=70&uid=4&sid=21102608488743" target="_blank">Link 4</a><br>
+              		<a href="http://www.fisherhouse.com/courses/2009/09/monicas-concepts-blog.html" target="_blank">Link 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            <li class="acc-header5" id="home"> 
+		        <a href="index.html">Main Menu</a>
+		    </li>
+            
+            <li class="acc-header5" id="early"> 
+		        <a href="early.html">Some Models and Early Theorists</a>
+		    </li>
+            
+            <li class="acc-header5" id="comm">
+		        <a href="communication.html">Interpersonal Communication</a>
+		    </li>
+            
+            <li class="acc-header5" id="audi">
+		        <a href="audiences.html">Audiences and Societies</a>
+		    </li>
+            
+            <li class="acc-header5" id="media">
+		        <a href="media.html">Media Theories</a>
+		    </li>
+            
+            <li class="acc-header5" id="effects"> 
+		        <a href="effects.html">Media Effects</a>
+		    </li>
+            
+            <li class="acc-header5" id="org"> 
+		        <a href="organization.html">Organizational Communication</a>
+		    </li>
+            
+            <li class="acc-header5" id="alpha"> 
+		        <a href="a2z.html">Alphabetical List</a>
+		    </li>
+            
+             <li class="acc-header5" id="alpha"> 
+		        <a href="http://www.karandikars.com/" target="_blank">About the developer</a></li>
+            
+           
+		</ul>
+	</div>
+  </body>
+</html>

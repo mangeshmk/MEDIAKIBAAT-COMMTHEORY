@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script language="javascript">
+  $(document).ready(function() {
+    theWidth = $(".imagePanel img").css('width');
+    $(".imagePanel").css('width',theWidth);
+});
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+</script>
+
+	<style>
+	* {
+		width:100%;
+	    margin:auto;
+		padding-left:0px;
+		padding-right:0px;
+		margin: 0;
+		border: none;
+		list-style-type: none;
+		font-size: large;
+	}
+	
+	.accordion {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+		margin:auto;
+	    border:1px solid #ccc;
+		height:auto;
+		text-align:justify;
+		/*text-wrap:unrestricted;*/
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		/* background-color:#FFF;	*/
+	
+	}
+	
+	.accordion2 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;		
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#000;
+		color:#FFF;
+		text-shadow:#666;
+		/*text-wrap:suppress;*/
+	}
+	
+	.accordion3 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#660000;
+		color:#FFF;
+		text-shadow:#666;
+	}
+	
+	
+	.imagePanel {
+    	margin: auto;
+		width:65%;
+	}
+	.imagePanel img { 
+	} 
+	.imagePanel p {
+	}    
+	.imagepanel a {
+		word-break:break-all;
+		
+	}
+	
+	.imagePanel2 {
+    	margin: auto;
+		width:100%;
+	}
+	.imagePanel2 img { 
+	} 
+	.imagePanel2 p {
+	}    
+	.imagepanel2 a {
+		
+		word-break:break-all;
+		
+	}
+	
+	.accordion .acc-content {
+		margin:auto;
+	    height: 0;
+	    overflow: hidden;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		padding-left:5px;
+		padding-right:5px;
+		width:95%;
+		word-wrap:break-word;
+	}
+	
+	.accordion .acc-content2 {
+		margin:auto;
+		width:95%;
+		text-align:left;
+		display: block;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#000;
+		font-weight: normal;
+		font-size: large;
+	}
+	
+	.linkers a
+	{
+		text-align:left;
+		color:#000;
+		font-weight:normal;
+		font-size: large;
+		text-decoration:underline;
+	}
+
+	
+	
+	.accordion li:target .acc-content {
+		margin:auto;
+	    height: auto;
+	    padding:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		background-color:#FFF;
+		padding-left:5px;
+		padding-right:5px;
+		text-wrap:unrestricted;
+
+	}
+	.accordion .acc-header a {
+		width:100%;
+		text-align:left;
+		display: block;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#CCC;
+		/*text-shadow: 1px 1px 1px #000;*/
+		font-weight: bold;
+		font-size: large;
+		border-bottom: 1px solid #aaa;
+		background:#000;
+		text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}
+	
+	.accordion .acc-header2 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#000;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#6A9571;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header2 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header3 a {
+		width:100%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#600;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header3 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header4 a {
+		width:100%;
+		text-align:left
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration:underline;
+	color:#000;
+	
+	font-weight:normal;
+	font-size: large;
+	
+	/*text-indent:10px;*/
+	
+	}
+
+	.accordion .acc-header5 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#300;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header5 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	body {
+	background-color: #300;
+}
+	</style>
+
+  </head>
+  <body id="homepage">
+  <div class="accordion2" id="sancharfirstlogo"><a href="index.html"><img src="assets/images/sancharfirst_logoN.jpg" width="100%" alt="sancharFirst Logo"></a></div>
+  <div class="imagePanel2" id="qr"><img src="assets/images/quickrev.jpg" alt="QUICKREV SERIES"></div>
+  <div class="accordion">
+    	<ul>
+        	
+            <li class="acc-header3" id="models"> 
+		        <a href="#models">Some Models of Communication</a>
+		        <div class="acc-content">
+				</div>
+         	</li>
+            
+            <li class="acc-header2" id="rasa"> 
+		        <a href="#rasa">The Theory of Rasa –  Indian perspectives on communication</a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/rasa.png" alt="Rasa Theory" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>The Theory of Rasa</strong> <strong>– Indian perspectives on communication</strong>  Rasa is the central principle of Indian dramatics and poetics. रस्यतइतिरस: - that which can be tasted (आस्वाद) is Rasa. This is the definition of Rasa. <br>
+			          <br>
+		            There are six kinds of Rasas – कटू (bitter), तिक्त (spicy), कषाय (acrid), मधुर (sweet), लवण (salty), आम्ल (sour).These Rasas can only be experienced by the sense of taste. The food that is made up of all these Rasas is called the six-Rasa-food or षड्रसभोजन. The same idea of taste is applied to drama and poetry. Thus drama and poetry is supposed to have the same 'tastefulness' and hence Rasas. The eight primary Rasas are शृंगार (beauty), हास्य (laughter), करूण (sadness), रौद्र (anger), वीर (bravery), भयानक (dangerous), बीभत्स (obscene), अद्भुत (miraculous). <br>
+		            <br>
+		            Various theorists of Dramatics have propounded more or less Rasas. It is believed that Bharata's Natyashastra is the first work that discusses the form of Rasa process. The Natyashastra is a treatise on drama. It is believed to have been compiled between the second century BCE and the seventh century ACE. Bharata is supposed to be the author of the Natyashastra. However whether he was an individual or a group of individuals is a matter of debate. However, according to Dr G T Deshpande, before Bharata, two Acharyas Druhin and Vasuki also propounded two different Rasa traditions. Bharata restricts himself to the Rasas in Drama.    <br>
+		            <br>
+		            <strong>		            Theory Application/Relevance</strong>:The Rasa theory is probably the oldest theories that explain communication as well as the connection between a performer and an audience. The theory clearly states that the Rasa resides in the Rasik, one who partakes of the communication experience. Only when a performer and the Rasik are on a common plane is communication is completed.</p>
+		        <p>&nbsp;</p>
+		         <strong>Further reading:</strong><br>
+		         <br>
+                 <a href="http://www.karandikars.com/rasa.htm" target="_blank">लिंक</a><br>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            <li class="acc-header" id="laswell"> 
+		        <a href="#laswell">Harold Laswell’s Model of Communication</a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/lasswell.png" alt="Harold Lasswell" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>Harold Dwight Lasswell</strong>, the American political scientist states that a convenient way to describe an act of communication is to answer the following questions:<br>
+			          <br>
+		              <strong>Who? <br>
+		            Says What? <br>
+		            In Which Channel? <br>
+		            To Whom? <br>
+		            With what effect? </strong><br>
+		            <br>
+			        </p>
+			        <p>This model is about process of communication and its function to society.  <br>
+			          <br>
+		            According to Lasswell there are three functions for communication: <br>
+		            Surveillance of the environment <br>
+		            Correlation of components of society <br>
+		            Cultural transmission between generation <br>
+                    <div class="imagePanel2"><img src="assets/images/laswellmodel.jpg" alt="Lasswell's Model"></div>
+		            <br>
+		            The Lasswell model suggests that the message flows in a multicultural society with multiple audiences. The flow of message is through various channels. This communication model is similar to Aristotle's communication model.  		 		<br>
+		            <br>
+	            In this model, the communication component 'who' refers to the research area called 'Control Analysis', 'says what' refers to 'Content Analysis', 'in which channel' refers to 'Media Analysis', 'to whom' refers to 'Audience Analysis' and 'with what effect' refers to 'Effect Analysis'
+	            <br>
+	            <br>
+	            </p>
+			        <p>
+		         	<strong>Links for more reading: </strong><br>
+		         	<br>
+                	<a href="http://en.wikipedia.org/wiki/Lasswell's_Model_of_Communication" target="_blank">Link 1</a><br>
+                	<a href="http://communicationtheory.org/lasswells-model/ " target="_blank">Link 2</a><br>
+                	<a href="http://itc-maribor.blogspot.in/2012/01/harold-lasswell.html " target="_blank">Link 3</a><br>
+                	<a href="http://zimmer.csufresno.edu/~johnca/spch100/masscomm.htm" target="_blank">Link 4</a><br>
+		        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+            <li class="acc-header2" id="shannon"> 
+		        <a href="#shannon">Shannon Weaver Model</a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/shannonweaver.png" alt="Shannon and Weaver" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>The Shannon–Weaver model </strong>of communication is often called as the  &quot;mother of all models.&quot; According to the Shannon-Weaver Model there are 8 key elements that are required for communication, or information transmission, to occur. <br>
+			          <br>
+                <div class="imagePanel2"><img src="assets/images/shannonmodel.jpg" alt="Shannon Weaver Model"></div>
+                      <br>
+			          These elements are: Source, Encoder, Message, Channel, Decoder, Receiver, Noise, and Feedback. The model is based on a book titled 'A Mathematical Theory of Communication' by Claude Shannon and Warren Weaver, in 1948. Probably the most important element that was included was the 'noise' which can alter the message. This 'noise' could be mechanical, electronic or semantic in nature.<br>
+			          <br>
+			        </p>
+			        <p>
+		         	<strong>Links for more reading: </strong>                    
+			        <p><br>
+			          <a href="http://en.wikipedia.org/wiki/Shannon–Weaver_model" target="_blank">Link 1</a><br>
+			          <a href="http://communicationtheory.org/shannon-and-weaver-model-of-communication/" target="_blank">Link 2</a><br>
+			          <a href="http://www.aber.ac.uk/media/Students/kjr9601.html" target="_blank">Link 3</a><br>
+	            <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            <li class="acc-header2" id="schramm"><a href="#schramm"><strong>विल्बर श्राम मॉडेल</strong></a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/schramm.png" alt="Wilbur Schramm" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p> संदेशाच्या देवण-घेवाणीच्या प्रक्रियेत एका कोड्याची देवाण-घेवाण होते. त्यामुळे संज्ञापन प्रक्रियात पूर्ण होते जेव्हा संदेश देणारा आपले कोडे मांडतो,पाठवतो, ते कोडे सोडवले जाते आणि पुन्हा नव्याने एक कोडे तयार करून प्रथम ज्याने संदेश पाठवला त्याच्याकडे परत पाठविले जाते. <br>
+			          <br>
+                      <div class="imagePanel"><img src="assets/images/shrammmodel.jpg" width="90%" alt="Schramm's Model"></div>
+                      <br>
+                      याच मॉडेलचा पुढे टूवे मॉडेल म्हणून विकास  झाला.<br>
+			          <br>
+			        </p>
+			        <p>
+		         	<strong>Links for more reading: </strong>                    
+			        <p><br>
+			          <a href="http://en.wikipedia.org/wiki/Wilbur_Schramm" target="_blank">Link 1</a><br>
+			          <a href="http://www.managementstudyguide.com/schramm-model-of-communication.htm" target="_blank">Link 2</a><br>
+			          <a href="http://knowledge.sagepub.com/view/key-concepts-in-marketing/n46.xml" target="_blank">Link 3</a><br>
+			          <a href="http://en.wikipedia.org/wiki/Models_of_communication" target="_blank">Link 4</a><br>
+			          <a href="http://www.uri.edu/personal/carson/kulveted/wlsmodel.html" target="_blank">Link 5</a><br>
+	            <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+       		<li class="acc-header" id="aristotle"> 
+		        <a href="#aristotle">Aristotle's Rhetoric </a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/Aristotele.png" alt="Aristotle" ></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist</strong>: Aristotle wrote his treatise on Rhetoric - or the art of persuasion, around 350 B.C. </p>
+		        <p>&nbsp;</p>
+		        <p><strong>Theory Explanation</strong>: Rather than being able to convince or persuade the audience, Aristotle defines the art of rhetoric as the ability to see what is persuasive in a subject, before arguing.   Aristotle divided the means of persuasive arguments into three categories: <br>
+		          <br>
+	            1) Ethos : Ethos is ethical appeal; it is about the credibility of the speaker or author and convincing with authority. <br>
+	            2) Pathos : Pathos is emotional appeal; it is about persuading by appealing to the reader or listener's emotions. <br>
+	            3) Logos : Logos is to appeal using logic; or persuading by using reason.   <br>
+	            <br>
+	            Rhetoric, thus, is an effective combination of argumentation and persuasion.</p>
+			        
+                    <br>
+                    Theory Application/Relevance: Rhetoric is used to convince the audiences. The misconception is that it is used to persuade the audience and convince them about something that is not true. However, rhetoric can be of help for even those who try to establish what is true to the public. The above three principles of rhetoric can be useful in communicating social messages, apart from its regular use in advertisements.
+                <p>&nbsp;</p>
+		         <strong>Links for more reading: </strong><br>
+		         <br>
+                	<a href="http://plato.stanford.edu/entries/aristotle-rhetoric" target="_blank">Link 1</a><br>
+			        <a href="http://classics.mit.edu/Aristotle/rhetoric.html" target="_blank">Link 2</a><br>
+			        <a href="http://courses.durhamtech.edu/perkins/aris.html" target="_blank">Link 3</a><br>
+			        <a href="http://spot.colorado.edu/~hauserg/ArSynop.htm" target="_blank">Link 4</a><br>
+		        	<a href="http://en.wikipedia.org/wiki/Rhetoric_(Aristotle)" target="_blank">Link 5</a><br>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+            
+            <li class="acc-header2" id="innis"> 
+	            <a href="#innis">Harold Innis</a>
+		        <div class="acc-content">
+			        <div class="imagePanel"><img src="assets/images/innis.png" width="75%" alt="Innis"></div>
+		          <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Harold Adams Innis - November 5, 1894 - November 8, 1952</p>
+		          <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong></p>
+		          <p>&nbsp;</p>
+			        <p><strong> Staples thesis: </strong>
+			        <p>In his staples thesis, Harold Innis states that the economy of a country is influenced by exploration and exports of raw materials or &quot;staples&quot; as he termed them. With this thesis and his studies on fur, lumber and paper trade in Canada, Innis further postulated that those who control the resources, control power. Hence, if one controls information, one controls power.   
+			        <p>
+			        <p>His most important contribution to media studies is perhaps his concept of space and time biased media.                                         
+			        <p>
+			        <p><strong>Time-biased media : </strong>Innis states that time-biased media are durable, difficult to move, and hence, stable, thus preventing territorial expansion. Since they have a long life, they encourage the expansion of an empire over long periods of time. Time-biased media include clay or stone tablets, hand-copied manuscripts on parchment or vellum and oral sources. Intended to carry stories and messages that last for many generations, but tend to reach limited audiences.   
+			        <p>
+			        <p><strong>Space-biased media : </strong>Space biased media, in turn are light and portable, and can be transported over large distances quickly. Innis states that space biased media repersent secular and territorial empires, but at the same time states that the space biased media are not durable, hence do not encourage urable, long lasting empires. Modern media such as radio, television, and mass circulation newspapers that convey information to many people over long distances, but have short exposure times.   While time-biased media favour stability, community, tradition and religion, space-biased media facilitate rapid change, materialism, secularism and empire.   
+			        <p>
+			        <p><strong>Monopolies of knowledge : </strong>Those who control knowledge, control power. They are also in a position to define what is legitimate knowledge. Monopolies of knowledge tend to polarize societies, and eventually face challenges to their power.                                                                                                                                            
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Harold_Innis" target="_blank">Link 1</a><br>
+                    <a href="http://en.wikipedia.org/wiki/Harold_Innis's_communications_theories" target="_blank">Link 2</a><br>
+                    <a href="http://en.wikipedia.org/wiki/Harold_Innis_and_the_cod_fishery" target="_blank">Link 3</a><br>
+                    <a href="http://www.media-studies.ca/articles/innis.htm" target="_blank">Link 4</a><br>
+                    <a href="http://www.youtube.com/watch?v=5xvSvWg8550" target="_blank">Link 5</a><br>
+                    <a href="http://www.youtube.com/watch?v=FLxBle8QBKY" target="_blank">Link 6</a><br>
+		        </div>
+		    </li>
+            
+            <li class="acc-header" id="mcluhan"> 
+	            <a href="#mcluhan">Theories of Communication (Understanding Media) </a>
+		        <div class="acc-content">
+			        <div class="imagePanel"><img src="assets/images/marshallmcluhan.png" width="75%" alt="mcluhan"></div>
+		          <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Marshall McLuhan - July 21, 1911 - December 31, 1980. McLuhan was a Canadian philosopher of Communication Theory.</p>
+		          <p>&nbsp;</p>
+			        <p><strong>The Medium is the Message</strong> : McLuhan proposed that media themselves, and not the content they carry, should be the focus of study. The media itself is more significant than the content carried by that medium. </p>
+			        <p>&nbsp;</p>
+			        <p>In his The Gutenberg Galaxy, he explains how communication technology 'alphabetic writing, the write downing press, and the electronic media' affects cognitive organization, which in turn has profound ramifications for social organization.   </p>
+			        <p>&nbsp;</p>
+			        <p><strong>The Global Village</strong>: McLuhan visualized world connected by an electronic network, forming a 'nervous system' like that of a living organism, and that events in one part, would affect the whole world. He saw the Internet as an extension of the human central nervous system. Based on this concept, he called the world a 'global village'. In this new age, according to McLuhan, mankind will evolve from an individualistic and fragmented society to newer communities, having a collective identity, with a 'tribal base.' McLuhan's called this new social organization as the global village. In a almost prophetic conceptualization, McLuhan saw the world as a global village connected by virtual media. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Ratio of Senses</strong>: McLuhan propounded that technology is an extension of a human faculty – like the wheel is an extension of the foot; a book is an extension of the eye; clothing an extension of the skin; and so on. In this context, he coined the terms &quot;hot&quot; and &quot;cool&quot; media, referring to the different sensory effects associated with media of higher or lower definition.   </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance</strong>: Although controversial at the time when he wrote them, McLuhan's communication concepts are relevant today in understanding new media.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Marshall_McLuhan" target="_blank">Link 1</a><br>
+                    <a href="http://www.marshallmcluhan.com/" target="_blank">Link 2</a><br>
+                    <a href="http://marshallmcluhanspeaks.com/" target="_blank">Link 3</a><br>
+                    <a href="http://www.youtube.com/watch?v=ImaH51F4HBw" target="_blank">Link 4</a><br>
+                    <a href="http://www.leaderu.com/orgs/probe/docs/mcluhan.html" target="_blank">Link 5</a><br>
+                    <a href="http://www.gingkopress.com/02-mcl/z_mcluhan-and-the-senses.html" target="_blank">Link 6</a><br>
+		        </div>
+		    </li>
+            
+             <li class="acc-header5" id="home"> 
+		        <a href="index.html">Main Menu</a>
+		    </li>
+            
+            <li class="acc-header5" id="early"> 
+		        <a href="early.html">Some Models and Early Theorists</a>
+		    </li>
+            
+            <li class="acc-header5" id="comm">
+		        <a href="communication.html">Interpersonal Communication</a>
+		    </li>
+            
+            <li class="acc-header5" id="audi">
+		        <a href="audiences.html">Audiences and Societies</a>
+		    </li>
+            
+            <li class="acc-header5" id="media">
+		        <a href="media.html">Media Theories</a>
+		    </li>
+            
+            <li class="acc-header5" id="effects"> 
+		        <a href="effects.html">Media Effects</a>
+		    </li>
+            
+            <li class="acc-header5" id="org"> 
+		        <a href="organization.html">Organizational Communication</a>
+		    </li>
+            
+            <li class="acc-header5" id="alpha"> 
+		        <a href="a2z.html">Alphabetical List</a>
+		    </li>
+            
+            <li class="acc-header5" id="alpha"> 
+		        <a href="http://www.karandikars.com/" target="_blank">About the developer</a>
+                </li>
+            
+            
+		</ul>
+	</div>
+  </body>
+</html>

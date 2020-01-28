@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script language="javascript">
+  $(document).ready(function() {
+    theWidth = $(".imagePanel img").css('width');
+    $(".imagePanel").css('width',theWidth);
+});
+
+document.addEventListener("backbutton", function(e){
+    if($.mobile.activePage.is('#homepage')){
+        e.preventDefault();
+        navigator.app.exitApp();
+    }
+    else {
+        navigator.app.backHistory()
+    }
+}, false);
+
+</script>
+
+	<style>
+	* {
+		width:100%;
+	    margin:auto;
+		padding-left:0px;
+		padding-right:0px;
+		margin: 0;
+		border: none;
+		list-style-type: none;
+		font-size: large;
+	}
+	
+	.accordion {
+		width:100%;
+		padding-left:0px;
+		padding-right:0px;
+		margin:auto;
+	    border:1px solid #ccc;
+		height:auto;
+		text-align:justify;
+		/*text-wrap:unrestricted;*/
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		/* background-color:#FFF;	*/
+	
+	}
+	
+	.accordion2 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;		
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#000;
+		color:#FFF;
+		text-shadow:#666;
+		/*text-wrap:suppress;*/
+	}
+	
+	.accordion3 {
+		padding-left:0px;
+		padding-right:0px;
+		padding-bottom:5px;
+	    margin:auto;
+		height:auto;
+		text-align:center;
+		font-family:Verdana, Geneva, sans-serif;
+		font-weight:bold;
+		font-size:x-large;
+		background-color:#660000;
+		color:#FFF;
+		text-shadow:#666;
+	}
+	
+	
+	.imagePanel {
+    	margin: auto;
+		width:65%;
+	}
+	.imagePanel img { 
+	} 
+	.imagePanel p {
+	}    
+	.imagepanel a {
+		word-break:break-all;
+		
+	}
+	
+	.imagePanel2 {
+    	margin: auto;
+		width:100%;
+	}
+	.imagePanel2 img { 
+	} 
+	.imagePanel2 p {
+	}    
+	.imagepanel2 a {
+		
+		word-break:break-all;
+		
+	}
+	
+	.accordion .acc-content {
+		margin:auto;
+	    height: 0;
+	    overflow: hidden;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		padding-left:5px;
+		padding-right:5px;
+		width:95%;
+		word-wrap:break-word;
+	}
+	
+	.accordion .acc-content2 {
+		margin:auto;
+		width:95%;
+		text-align:left;
+		display: block;
+		padding-top:1px;
+		padding-bottom:1px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#000;
+		font-weight: normal;
+		font-size: large;
+	}
+	
+	.linkers a
+	{
+		text-align:left;
+		color:#000;
+		font-weight:normal;
+		font-size: large;
+		text-decoration:underline;
+	}
+
+	
+	
+	.accordion li:target .acc-content {
+		margin:auto;
+	    height: auto;
+	    padding:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:large;
+		background-color:#FFF;
+		padding-left:5px;
+		padding-right:5px;
+		text-wrap:unrestricted;
+
+	}
+	.accordion .acc-header a {
+		width:100%;
+		text-align:left;
+		display: block;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:0px;
+		padding-right:0px;
+		text-decoration: none;
+		color:#CCC;
+		/*text-shadow: 1px 1px 1px #000;*/
+		font-weight: bold;
+		font-size: large;
+		border-bottom: 1px solid #aaa;
+		background:#000;
+		text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}
+	
+	.accordion .acc-header2 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#000;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#6A9571;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header2 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header3 a {
+		width:100%;
+		text-align:center;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#600;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header3 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	
+	.accordion .acc-header4 a {
+		width:100%;
+		text-align:left
+	display: block;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration:underline;
+	color:#000;
+	
+	font-weight:normal;
+	font-size: large;
+	
+	/*text-indent:10px;*/
+	
+	}
+.accordion .acc-header5 a {
+		width:100%;
+		text-align:left;
+	display: block;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left:0px;
+	padding-right:0px;
+	text-decoration: none;
+	color:#FFF;
+	/*text-shadow: 1px 1px 1px #000;*/
+	font-weight: bold;
+	font-size: large;
+	border-bottom: 1px solid #aaa;
+	background:#300;
+	text-indent:10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	transition: .5s;
+	}
+	.accordion .acc-header5 a:hover {
+	    text-decoration:none;
+	    border-bottom:1px solid #ddd;
+	    background:#777029;
+	    padding-left:2px;
+		font-size:large;
+		text-indent:10px;
+	}	
+	body {
+	background-color: #300;
+}
+	</style>
+
+  </head>
+  <body id="homepage">
+  <div class="accordion2" id="sancharfirstlogo"><a href="index.html"><img src="assets/images/sancharfirst_logoN.jpg" width="100%" alt="sancharFirst Logo"></a></div>
+  <div class="imagePanel2" id="qr"><img src="assets/images/quickrev.jpg" alt="QUICKREV SERIES"></div>
+  <div class="accordion">
+    	<ul>
+        
+        				<li class="acc-header" id="astr"> 
+		        <a href="#astr">Adaptive Structuration Theory</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/gerry.png" alt="DeSanctis"><br></div>
+			        <p><strong>Theorist:</strong> Gerardine DeSanctis and Marshall Scott Poole developed the theory in 1994 taking off from Anthony Giddens' original Structuration Theory. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Theory Explanation</strong>: Adaptive Structuration Theory (AST) provides the basis for understanding how organizational structures are created and evolve in consonance with the evolution and adaptation of technology. AST helps understand hierarchies in organizations and groups, how the communication processes work within and among them, and the dynamics of power that influence communication and decision making. Importantly, AST critiques the technocentric view of technology use, while emphasizing its social aspects. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance</strong>: Progressing from the printing press, telegraph, radio, telephone, television to the Internet, AST is useful to analyze how new technologies impact organizational and social structures and how society in turn modifies their use to perpetuate social structures. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://www.academia.edu/667633/Adaptive_Structuration_Theory_Understanding_How_Advancing_Technologies_Drive_Organizational_Change" target="_blank">Link 1</a><br>
+			        <a href="http://istheory.byu.edu/wiki/Adaptive_structuration_theory" target="_blank">Link 2</a><br>
+			        <a href="http://www.business.unr.edu/faculty/davec/adaptive%20structuration%20theory%20poole%20and%20desanctis.pdf" target="_blank">Link 3</a><br>
+			        <a href="http://highered.mcgraw-hill.com/sites/0073135615/student_view0/chapter15/" target="_blank">Link 4</a><br>
+                    <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Organizational%20Communication/AST_theory.doc/" target="_blank">Link 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header2" id="agenda"> 
+		        <a href="#agenda">Agenda Setting Theory</a>
+		        <div class="acc-content">
+                	<div class="imagePanel"><img src="assets/images/walterlippmann.png" alt="Walter Lippmann"></div>
+			          <br>
+			        <p><strong>Theorist: </strong>Walter Lippman first talked about it in 1922 </p><br>
+			        <p><strong>Theory Development:</strong> Maxwell McCombs &amp; Donald L. Shaw formalized it in 1972 </p><br>
+		          <p><strong>Theory Explanation:</strong> Because we depend on the media for information, media has the power to decide what is more important, or what is more salient. This function of deciding the salience is called agenda setting. Agenda setting is done due to several reasons, political as well as commercial. By using gatekeeping (filtering) and framing, the media shapes the news as per their agenda. This may or may not represent the complete truth. Thus, by concentrating on selected news and by reframing it, media persuades the audience to believe in the salience of some issues over others. </p>
+			        <p>&nbsp;</p>
+			        <p>Rogers and Dearing identify three types of agenda setting:<br>
+			          1) Public agenda setting 		<br>
+			          2) Media agenda setting 		<br>
+			          3) Policy agenda setting<br>
+                  	<br>
+                  	<strong>Theory Application/Relevance:</strong> Media agenda is generally evident in news pertaining to politics, foreign affairs, history, medical news, etc.<br><br>
+                  	<strong>Online resources:</strong>.</p>
+			        <p><br>
+			          
+			          <a href="http://en.wikipedia.org/wiki/Agenda-setting_theory" target="_blank">Link 1</a><br>
+			          <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Mass%20Media/Agenda-Setting_Theory.doc/" target="_blank">Link 2</a><br>
+			          <a href="http://www.communicationstudies.com/communication-theories/agenda-setting-theory" target="_blank">Link 3</a><br>
+			          <a href="http://agendasetting.com/index.php/agenda-setting-theory" target="_blank">Link 4</a><br>
+		          </p>
+		        </div>
+         	</li>
+            
+            
+            <li class="acc-header" id="alter"> 
+		        <a href="#alter">Altercasting </a>
+	          <div class="acc-content">
+			        <p><strong>Theorist</strong>: The concept of Altercasting was introduced by Eugene A. Weinstein and Paul Deutschberger in 1963. </p>
+		        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation</strong>: Altercasting is a theory of mass communication with roots in sociology. It is defined as 'projecting an identity'; and deals with the 'roles' individuals play in society, or assume roles that are thrust upon them, and behave in a particular way because of social pressures.    </p>
+			        <p>&nbsp;</p>
+			        <p>Thus, there are two types of Altercasting:    <br>
+		            (1) Manded Altercasting -- is when we tell people who they are and how they are supposed to behave by assigning certain importance to that role (Eg: Teacher-Student);    <br>
+		            (2) Tact Altercasting – is how we put ourselves in a role which elicits certain expectations from others (Eg: A priest is expected to 'behave' like a priest at all times). . </p>
+		        <p>&nbsp;</p>
+		          <p><strong>Theory Application/Relevance</strong>: The theory is used extensively in media marketing strategies where through powerful images the audiences are cast in certain roles and behavior. </p>
+		        <p>&nbsp;</p>
+			       <p><strong>Further reading: </strong></p>
+			       <p>&nbsp;</p>
+                    <a href="http://www.jstor.org/discover/10.2307/2786148?uid=3738256&uid=2129&uid=2&uid=70&uid=4&sid=21102603804433" target="_blank">Link 1</a><br>
+			        <a href="http://www.sagepub.com/newman5study/resources/blumstein1.htm" target="_blank">Link 2</a><br>
+			        <a href="http://singmeanadoreimi.wordpress.com/2011/10/16/altercasting-theory/" target="_blank">Link 3</a><br>
+			        <a href="http://en.wikipedia.org/wiki/Altercasting" target="_blank">Link 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+	          </div>
+            </li>
+            
+             <li class="acc-header2" id="argu"> 
+		        <a href="#argu">Argumentation Theory </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/toulmin.png" alt="Toulmin" ></div>
+			        <p><strong>Theorist:</strong> Stephen E. Toulmin is the most influential theorist who wrote on 'The Uses of Argument' in 1958, although the origins of argumentation lie in Aristotle's logic propounded way before the 19th century.     </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Development:</strong> Various versions of the theory were developed over the years, among them Perelman who developed The New Rhetoric in 1969, P.J. Schellens (1985), Van Eemeren and R. Groontendorst (1996) were most prominent.     </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Simply put, Argumentation Theory is about how people communicate using reason and logic.    </p>
+			        <p>&nbsp;</p>
+			        <p>Toulmin's argumentation comprised six interrelated components – Claim, Data, Warrant, Backing, Rebuttal and Qualifier.    </p>
+			        <p>&nbsp;</p>
+			        <p>Schellens talks of 'Restricted ' and 'Unrestricted' argumentation.    </p>
+			        <p>&nbsp;</p>
+			        <p>Eemeren and Groontendorst lay out the different stages of argument as Confrontation, Opening, Argumentation and Conclusion.   		 </p>
+			        <p>&nbsp;</p>
+			        <p>The structure of an argument is typically as follows: 		 		an argument has an internal structure, comprising the following  		- a set of assumptions or premises  		- a method of reasoning or deduction and  		- a conclusion or point.  		An argument must have at least two premises and one conclusion. 		 		 </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> Argumentation is used in practically all kinds of interpersonal and group or mass communication whether spoken, written or visual, and is widely used by academicians in all fields, scientists, professionals, lawmakers, media and advertisers. </p>
+		          <p>&nbsp;</p>
+			        <strong>Links for more reading: </strong><br>
+			        <br>
+                	<a href="http://en.wikipedia.org/wiki/Argumentation_theory" target="_blank">Link</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/levels%20of%20theories/micro/argumentation%20theory.doc/" target="_blank">Link</a><br>
+			        <a href="http://www.dougwalton.ca/papers%20in%20pdf/09ArgShort.pdf" target="_blank">Link</a><br>
+			        <a href="http://www.sjsu.edu/people/anand.vaidya/courses/c5/s2/Why%20Do%20Humans%20Reason%20Sperber.pdf" target="_blank">Link</a><br>
+			        <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="aristotle"> 
+		        <a href="#aristotle">Aristotle's Rhetoric </a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/Aristotele.png" alt="Aristotle" ></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist</strong>: Aristotle wrote his treatise on Rhetoric - or the art of persuasion, around 350 B.C. </p>
+		        <p>&nbsp;</p>
+		        <p><strong>Theory Explanation</strong>: Rather than being able to convince or persuade the audience, Aristotle defines the art of rhetoric as the ability to see what is persuasive in a subject, before arguing.   Aristotle divided the means of persuasive arguments into three categories: <br>
+		          <br>
+	            1) Ethos : Ethos is ethical appeal; it is about the credibility of the speaker or author and convincing with authority. <br>
+	            2) Pathos : Pathos is emotional appeal; it is about persuading by appealing to the reader or listener's emotions. <br>
+	            3) Logos : Logos is to appeal using logic; or persuading by using reason.   <br>
+	            <br>
+	            Rhetoric, thus, is an effective combination of argumentation and persuasion.</p>
+			        
+                    <br>
+                    Theory Application/Relevance: Rhetoric is used to convince the audiences. The misconception is that it is used to persuade the audience and convince them about something that is not true. However, rhetoric can be of help for even those who try to establish what is true to the public. The above three principles of rhetoric can be useful in communicating social messages, apart from its regular use in advertisements.
+                <p>&nbsp;</p>
+		         <strong>Links for more reading: </strong><br>
+		         <br>
+                	<a href="http://plato.stanford.edu/entries/aristotle-rhetoric" target="_blank">Link 1</a><br>
+			        <a href="http://classics.mit.edu/Aristotle/rhetoric.html" target="_blank">Link 2</a><br>
+			        <a href="http://courses.durhamtech.edu/perkins/aris.html" target="_blank">Link 3</a><br>
+			        <a href="http://spot.colorado.edu/~hauserg/ArSynop.htm" target="_blank">Link 4</a><br>
+		        	<a href="http://en.wikipedia.org/wiki/Rhetoric_(Aristotle)" target="_blank">Link 5</a><br>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+           
+            <li class="acc-header2" id="attr"> 
+		        <a href="#attr">Attribution Theory </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/heider.png" alt="Heider" ><br></div>
+                  <br>
+			        <p><strong>Theorist:</strong> Fritz Heider in 1958 </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Development</strong>: Based on Attribution theory, Edward E. Jones and Keith Davis in 1965 developed the Correspondent Inference Theory, and Harold Kelly developed the Co-variation Model.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Based in psychology, Attribution Theory is about how people attach meanings to other's behavior and their own. Also, without scientific basis, people tend to attribute their own reasons and casual explanations and judgments to the general social environment, in a manner that helps them cope with events and happenings. </p>
+			        <p>&nbsp;</p>
+			        <p>Heider further classified attribution into – <br>
+		            internal (pertaining to individual behavior) and <br>
+		            external (pertaining to situations or social environment) attribution. </p>
+			        <p>&nbsp;</p>
+			        <p>Heider called people naïve psychologists trying to attribute their own cause and effect relationships to make sense of the social world. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> Attribution Theory helps in social sciences research to understand individual motivations in particular and society's behavior in general. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading:</strong><br>
+			          <br>
+			        </p>
+                    <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/attribution_theory.doc/" target="_blank">Link 1</a><br>
+			        <a href="http://en.wikipedia.org/wiki/Attribution_(psychology)" target="_blank">Link 2</a><br>
+			        <a href="http://education.purduecal.edu/Vockell/EdPsyBook/Edpsy5/edpsy5_attribution.htm" target="_blank">Link 3</a><br>
+			        <p>&nbsp;</p>
+		        </div>
+		    </li>
+
+
+			 <li class="acc-header" id="commbarriers"> 
+		        <a href="#commbarriers">Barriers to  Communication</a>    
+	            <div class="acc-content">
+                <p>&nbsp;</p>
+			        <p><strong>Barriers to Communication </strong></p>
+			        <p>&nbsp;</p>
+			        <p>Physical and mechanical </p>
+			        <p>&nbsp;</p>
+			        <p>Psychological </p>
+			        <p>&nbsp;</p>
+			        <p>Self Image Resistance to change </p>
+			        <p>&nbsp;</p>
+			        <p>Defensiveness and Fear </p>
+			        <p>&nbsp;</p>
+			        <p>Linguistic and Cultural  </p>
+			        <p>&nbsp;</p>
+			        <p>Language and Meaning </p>
+			        <p>&nbsp;</p>
+			        <p><strong>References</strong></p>
+			        <p>&nbsp; </p>
+			        <a href="http://my.safaribooksonline.com/book/medicine/9789332501461/chapter-1-review-of-communication-process/ch1_7_xhtml" target="_blank">Link 1</a> <br>
+			        <a href="http://www.opin.ca/article/seven-barriers-communication" target="_blank">Link 2</a><br>
+			        <a href="http://www.skillsyouneed.com/ips/barriers-communication.html" target="_blank">Link 3</a><br>
+			        <a href="http://en.wikipedia.org/wiki/Communication" target="_blank">Link 4</a><br>
+			        <a href="http://cas.upes.ac.in/pdf/Barriers%20to%20Commn%203.pdf" target="_blank">Link 5</a><br>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+             <li class="acc-header2" id="civil"> 
+		        <a href="#civil">Civil Society</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/hobbes.png" width="75%" alt="Hobbes"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Thomas Hobbes </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Concept Explanation:</strong> Thomas Hobbes underlined the need of a powerful state to maintain civility in society. For Hobbes, human beings are motivated by self-interests. Moreover, these self-interests are often contradictory in nature. Therefore, in state of nature, there was a condition of a war of all against all. </p>
+			        <p>&nbsp;</p>
+			        <p>Civil society is composed of the totality of many voluntary social relationships, civic and social organizations, and institutions that form the basis of a functioning society, as distinct from the force-backed structures of a state (regardless of that state's political system), the commercial institutions of the market, and private criminal organizations like the mafia. Together, state, market, and civil society constitute the entirety of a society, and the relations between these components determine the character of a society and its structure..   </p>
+			        <p>&nbsp;</p>
+			        <p>As far as Hobbes was concerned, rationality and self-interests persuaded human beings to combine in agreement, to surrender sovereignty to a common power.   Peaceful coexistence among human beings could be ensured through social pacts or contracts. They considered civil society as a community that maintained civil life, the realm where civic virtues and rights were derived from natural laws..   </p>
+			        <p>&nbsp;</p>
+			        <p>For Marx, civil society was the 'base' where productive forces and social relations were taking place, whereas political society was the 'superstructure'. Agreeing with the link between capitalism and civil society, Marx held that the latter represents the interests of the bourgeoisie.</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+                    <p><strong>Further reading:</strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/Thomas_Hobbes" target="_blank">Link 1</a><br>
+                  <a href="http://jim.com/hobbes.htm" target="_blank">Link 2</a><br>
+                  <a href="http://www.jstor.org/discover/10.2307/3235060?uid=3738256&uid=2129&uid=2&uid=70&uid=4&sid=21102596922137" target="_blank">Link 3</a><br>
+                  <a href="http://graduateinstitute.ch/files/live/sites/iheid/files/sites/political_science/shared/political_science/1836/Week_3_Pietrzyk.pdf" target="_blank">Link 4</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Civil_society" target="_blank">Link 5</a><br>
+                  <a href="http://www.arabmediasociety.com/?article=773" target="_blank">Link 6</a><br>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="cnn"> 
+		        <a href="#cnn">The CNN Effect </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/cnn.png" width="75%" alt="CNN Effect"></div>
+		            <p>&nbsp;</p>
+		            <p><strong>Theory Explanation:</strong> The CNN Effect has been theorized as the effect of the 24-hour news networks on the general political and economic environment of any region. The theory's origins are in the American 24-hour cable news channel CNN's coverage of some of the most significant events of the 1980s like the Gulf War, fall of the Berlin Wall, ethnic clashes in Bosnia, etc. Although much debated, CNN's over-the-top coverage of international events then is supposed to have flared up public opinion and influenced some American foreign policy decisions. The CNN Effect eventually came to refer to not just news on CNN but any 24-hour news channel transmitting dramatic, live images especially from conflict areas or those struck by natural disasters thereby influencing policy. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Theory Application/Relevance:</strong> The CNN Effect has been debunked more by administrators and legislators than academicians and theorists. Today, however, saturation coverage of war zones or calamities on television news networks appears to have dulled the senses of the viewers. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Further reading:</strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/CNN_effect" target="_blank">Link 1</a><br>
+                  <a href="http://www.ajr.org/article.asp?id=3572" target="_blank">Link 2</a><br>
+                  <a href="http://courses.essex.ac.uk/gv/gv905/extras/Robinson_cnn_effect.pdf" target="_blank">Link 3</a><br>
+                  <a href="https://repository.library.georgetown.edu/bitstream/handle/10822/553423/zingarelliMeganElizabeth.pdf?sequence=1" target="_blank">Link 4</a><br>
+                  <a href="http://worldpoliticsblog.wordpress.com/2011/08/18/famine-in-somalia-and-the-cnn-effect/" target="_blank">Link 5</a><br>
+                  <a href="http://www.jbjv.com/Does-the-CNN-Effect-Exist-Military.html" target="_blank">Link 6</a><br>
+		        </div>
+		    </li>
+            
+            <li class="acc-header2" id="contag"> 
+		        <a href="#contag">Contagion Theories </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/gustaveLeBon.png" alt="Gustav" ><br></div>
+		            <p>&nbsp;</p>
+		            <p><strong>Theorist:</strong> Gustave Le Bon was the first to theorize about psychology. The theory was later developed in the context of various media related theories.  </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Theory Explanation:</strong> In psychology, Contagion Theory is about infectious attitudes or collective crowd behavior which is swayed by emotions. Le Bon theorized that people tend to surrender to emotional arousal within a crowd and imitate each other often leading to irrational behavior or herding behavior.   </p>
+		            <p>&nbsp;</p>
+		            <p>One of the many interpersonal communication theories, in organizations, Contagion Theory pertains to the communication networks that influence the attitudes and behavior of members within that network. Also people sharing similar communication patterns or new media networks tend to display similar attitudes and behaviors.</p>
+		            <p>&nbsp;</p>
+		            <p><strong>Application/Relevance: </strong>The Contagion Theory applies to any organization with inter-departmental networks or self-interest groups or groups that share the same information technology. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Further reading: </strong><br>
+		              <br>
+		            </p>
+                    <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Contagion_theories.doc/" target="_blank">Link 1</a><br>
+			        <a href="http://en.wikibooks.org/wiki/Introduction_to_Sociology/Collective_Behavior" target="_blank">Link 2</a><br>
+			        <a href="http://humannaturelab.net/wp-content/themes/human-nature-lab/media/pdf/publications/articles/136.pdf" target="_blank">Link 3</a><br>
+			        <a href="http://www.columbia.edu/itc/hs/medical/bioethics/nyspi/material/MediaContagionAndSuicide.pdf" target="_blank">Link 4</a><br>
+			        <a href="http://www.terrorismanalysts.com/pt/index.php/pot/article/view/73/html" target="_blank">Link 5</a><br>
+			        <p>&nbsp;</p>
+	          </div>
+          </li>
+            
+            <li class="acc-header" id="diss"> 
+		        <a href="#diss">Cognitive Dissonance Theory </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/festinger.png" alt="Festinger" ><br></div>
+		            <p>&nbsp;</p>
+		            <p><strong>Theorist:</strong> Leon Festinger in 1951 <br>
+		              <br>
+	                <strong>	                Theory Explanation</strong>: Based in psychology, Cognitive Dissonance Theory is the discomfort one feels when in a given situation, they are faced with having to choose between two conflicting beliefs. The theory suggests that people like to hold all of their beliefs and attitudes in harmony and tend to manipulate them to avoid discomfort or disharmony or inconsistency if they had to choose one over the other. Festinger proposed that so powerful is the motive to maintain cognitive consistency that people tend to sometimes behave irrationally in a situation of cognitive dissonance. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Theory Application/Relevance:</strong> Useful in social sciences research or understanding human behavior in times of crisis. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Further reading:</strong><br>
+		              <br>
+		             <a href="http://en.wikipedia.org/wiki/Cognitive_dissonance" target="_blank">Link 1</a><br>
+			        <a href="http://www.simplypsychology.org/cognitive-dissonance.html" target="_blank">Link 2</a><br>
+			        <a href="http://www.ithaca.edu/faculty/stephens/cdback.html" target="_blank">Link 3</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Cognitive_Dissonance_theory.doc/" target="_blank">Link 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header2" id="cult"> 
+	          <a href="#cult">Cultivation Theory </a>
+		        <div class="acc-content">
+		          <div class="imagePanel"><img src="assets/images/gerbner.png" alt="Gerbner"></div>
+	              <br>
+	              <strong>Theorist</strong>:</strong> George Gerbner originally proposed the theory in the 1960s </p>
+		          <p>&nbsp;</p>
+		          <p><strong>Theory Development:</strong> Gerbner along with Gross further expanded the theory in 1976. </p>
+		          <p>&nbsp;</p>
+                  <p><strong>Theory Explanation: </strong>This is a media effects theory which falls under the stalagmite theories (Black et.al.). The cultivation theory proposes that the media 'cultivates' or slowly builds viewers' perceptions of reality, by repeatedly providing content that they think should be given. Television has long-term effects on viewers' attitudes, though not so much in their behavior. </p>
+                  <p>&nbsp;</p>
+                  <p>Gerbner categorized TV viewers as 'heavy viewers' (those who watched more than four hours of TV in a day) and 'light viewers' (those who watched less than four hours of TV in a day). He theorized that heavy watchers tend to believe that the world, as shown on television is the real world rather than a represented world. The researchers also state that the media does not create new attitudes and beliefs, but strengthens the pre-existing ones.   </p>
+                  <p>&nbsp;</p>
+                  <p><strong>Further reading: </strong>                   
+                  <p><br>
+                    <a href"http://www.colorado.edu/communication/meta-discourses/Papers/App_Papers/Gulisano.htm" target="_blank">Link 1</a><br>
+                    <a href"http://www.aber.ac.uk/media/Documents/short/cultiv.html" target="_blank">Link 2</a><br>
+                    <a href"http://www.utwente.nl/cw/theorieenoverzicht/theory%20clusters/media,%20culture%20and%20society/cultivation_theory-1.doc/" target="_blank">Link 3</a> <br>
+                    <a href"http://masscommtheory.com/theory-overviews/cultivation-theory/" target="_blank">Link 4</a><br>
+                  <p>&nbsp;</p>
+              </div>
+	      </li>
+          
+          <li class="acc-header" id="depend"> 
+		        <a href="#depend">Dependency Theory </a>
+	        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/sandraball.png" alt="Sandra Ball"></div>
+	              <br>
+	            <p><strong>Theorist:</strong> Sandra Ball-Rokeach and Melvin DeFleur proposed the theory in 1976, having expanded it from the theory of Uses and Gratifications and Agenda Setting Theory.    </p>
+              <p>&nbsp;</p>
+              <p><strong>Theory Explanation:</strong> The theory proposes that as a person depends on media, it becomes more and more important in the person's life, and in such a situation, media tends to have a greater influence on the person. Dependency Theory is one of the first media theories that considered audience as an active part in the communication process and tried to establish a link between the media, audience and the society at large. Although the Uses and Gratifications Theory suggests that the audience takes only what it wants or finds useful from the media, the Dependency Theory says that the media makes the audience dependent by satisfying that need or want. </p>
+              <p>&nbsp;</p>
+	            <p>The degree of dependence on media are influenced by two factors: <br>
+	              1. When you find the media that meets your needs, you tend to become more and more dependent on it. <br>
+	              2. When you face social conflict, or when you are forced to reevaluate your beliefs, religious practices, etc., your dependency on media increases. In times of stability, your level of dependency could go down.    <br>
+	              <br>
+              <strong>Further reading:</strong></p>
+	            <p><br>
+	              <a href"http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Mass%20Media/Dependency%20Theory.doc/" target="_blank">Link 1</a><br>
+	              <a href"http://en.wikipedia.org/wiki/Media_systems_dependency_theory" target="_blank">Link 2</a><br>
+	              <br>
+              </p>
+	        </div>
+	      </li>
+          
+             <li class="acc-header2" id="diffu"> 
+		        <a href="#diffu">Diffusion of Innovations Theory </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/rogers.png" alt="Rogers"><br></div>
+		            <p><strong>Theorist:</strong> Everett Rogers professed this theory in 1962 </p>
+	              <p>&nbsp;</p>
+		            <p><strong>Theory Explanation:</strong> Diffusion of Innovations Theory is all about the spread of technology and new ideas through different cultures. Diffusion goes beyond the Two-Step Flow Theory to establish the factors that affect the adoption of new ideas or products or technology by a particular culture. The catalysts of influence – as in the two-step flow theory – are opinion leaders, called 'adopters' in this theory, who in turn are influenced by the media. The theory assumes that not all innovations are adopted by all societies or cultures at the same time in the same manner. And this is where interpersonal communication networks come into play between the change agents, the media, the adopters and ultimately, the audience or members of a given society. Thus, over time, an idea or product gains momentum and diffuses or spreads through a specific population or social system. </p>
+		            <p>&nbsp;</p>
+		            <p>Theory Application/Relevance: This theory is applicable in understanding the penetration of new media technologies and how technology is transforming cultures and to what extent. This is also useful in ensuring equitable spread of ideas in an organization by and to see which ideas or innovations work better with everyone and how. </p>
+	              <p>&nbsp;</p>
+		            <p><strong>Further reading: </strong></p>
+		            <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Diffusion_of_innovations" target="_blank">Link 1</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Communication%20and%20Information%20Technology/Diffusion_of_Innovations_Theory.doc/" target="_blank">Link 2</a><br>
+			        <a href="http://www.enablingchange.com.au/Summary_Diffusion_Theory.pdf" target="_blank">Link 3</a><br>
+			        <a href="http://www.stanford.edu/class/symbsys205/Diffusion%20of%20Innovations.htm" target="_blank">Link 4</a><br>
+                    <a href="http://www.rogerclarke.com/SOS/InnDiff.html" target="_blank">Link 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+           
+           
+           
+           <li class="acc-header" id="evt"> 
+		        <a href="#evt">Expectancy Value Theory </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/fishbein.png" alt="Fishbein" ><br></div>
+		            <p><strong>Theorist:</strong> Martin Fishbein developed this theory in the 1970s. </p>
+	              <p>&nbsp;</p>
+		            <p><strong>Theory Explanation: </strong>The Expectancy Value Theory falls under the larger scope of the Uses and Gratifications Theory. Loosely, it is about expectancies (beliefs) and evaluations. </p>
+		            <p>&nbsp;</p>
+		            <p>Fishbein theorizes that people's attitude and behavior towards the world is shaped according to their beliefs and the evaluations based on those beliefs.    </p>
+		            <p>&nbsp;</p>
+		            <p>The beliefs are of two kinds:  <br>
+	                1) what they believe in and <br>
+	                2) what they believe about.    </p>
+		            <p>&nbsp;</p>
+		            <p>The theory states that people's behavior in response to their beliefs and values is always goal oriented; and where there is a dichotomy of beliefs, they tend to choose the one that has a greater combination of success and value. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Theory Application/Relevance:</strong> This theory can be used to determine the attitudes and predict the behavior of voters, or used by advertisers to understand what kind of marketing will work best on different people. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Further reading:</strong></p>
+		            <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Expectancy-value_theory" target="_blank">Link 1</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Expectancy_Value_Theory.doc/" target="_blank">Link 2</a><br>
+			        <a href="http://aguda.org.il/files/academic_bank/2/322/55859/2_2007_55859_1170980723.97.pdf" target="_blank">Link 3</a><br>
+			        <a href="http://130.18.140.19/persuasion/ExpectancyValueTheory.htm" target="_blank">Link 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+          
+           <li class="acc-header2" id="frames"> 
+		        <a href="#frames">Framing Theory </a>
+            <div class="acc-content">
+            <div class="imagePanel"><img src="assets/images/fairhurst.png" alt="Gail Fairhurst"></div>
+			          <br>
+		            <p><strong>Theorists:</strong> Several media researchers have theorized about Framing of news or issues by the media, prominent among them are Todd Gitlin (1980), Shanto Iyengar (1990) and Fairhurst &amp; Sarr (1996). </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Theory Explanation:</strong> Framing is the way the media presents the events and issues they cover and the way the audience interprets them. Framing is the way media focuses attention on certain events, individuals and issues, and leads the public to 'look' at them from within a 'frame' set out by the media. Framing is done based on the agenda set by the media organization. Hence, framing theory has to be studied in conjunction with the Agenda Setting Theory. Framing as an aspect of Agenda Setting Theory has been studied in various connected fields including communications and media studies, psychology, anthropology and sociology. </p>
+		            <p>&nbsp;</p>
+		            <p>Shanto Iyengar theorized about two frames:  <br>
+		              <br>
+	                Episodic Frames: where news is narrowly framed and over time the issue gets trivialized in public discourse. The news with an episodic frame does not have an in-depth story or analysis. You may relate this with 'Parachute Journalism'.  <br>
+	                <br>
+	                Thematic Frames: where news is framed in a more abstract, wider frame giving a deeper view of issues. You may relate this with 'Immersion Journalism'.  <br>
+	                <br>
+	                <strong>	                Theory Application/Relevance:</strong> Framing Theory is used in political campaigns, advertising, corporate news, government policies, etc. </p>
+              <p>&nbsp;</p>
+	              <p><strong>Further reading:</strong><br>
+	                <a href"http://www.asc.upenn.edu/usr/ogandy/c45405%20resources/scheufele%20framing%20as%20effects.pdf" target="_blank">Link 1</a><br>
+	                <a href"http://www.scottlondon.com/reports/frames.html" target="_blank">Link 2</a><br>
+	                <a href"http://www.frameworksinstitute.org/assets/files/iyengarinterview2009.pdf" target="_blank">Link 3</a><br>
+	                <a href"http://en.wikipedia.org/wiki/Framing_(social_sciences)" target="_blank">Link 4</a><br>
+	                <br>
+                  </p>
+            </div>
+		    </li>
+            
+          <li class="acc-header" id="frank"> 
+		        <a href="#frank">Frankfurt School of Thought</a>
+		        <div class="acc-content">
+                <div class="imagePanel2"><img src="assets/images/frankfurt.png" width="85%" alt="Frankfurt"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorists:</strong> Five theorists from Frankfurt were chiefly responsible for establishing Critical Theory as a specific strand of thought: Herbert Marcuse, Theodor Adorno, Max Horkheimer, Walter Benjamin, and, slightly later, Jürgen Habermas </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Concept Explanation:</strong> The political turmoil of Germany's troubled interwar years greatly affected the Frankfurt School's development. Its thinkers were particularly influenced by the failure of the working-class revolution in Western Europe (precisely where Marx had predicted that a communist revolution would take place) and by the rise of Nazism in such an economically and technologically advanced nation as Germany. </p>
+			        <p>&nbsp;</p>
+			        <p>The mass media, like all other industries in capitalist society, produces and sells a commodity. However, the commodity produced and sold is not what most people think it is. The commodity produced and sold is not the program or product nor is it the advertisement. &quot;The most intimate reactions of human beings have been so thoroughly reified that the idea of anything specific to themselves now persists only as an utterly abstract notion: personality scarcely signifies anything more than shining white teeth and freedom from body odour and emotions. </p>
+			        <p>&nbsp;</p>
+			        <p>The triumph of advertising in the culture industry is that consumers feel compelled to buy and use its products even though they see through them,&quot; argued Adorno and Horkheimer. It was thus an era of mass production and consumption characterized by uniformity and homogeneity of needs, thought, and behavior producing a mass society and what the Frankfurt School described as 'the end of the individual'. </p>
+			        <p>&nbsp;</p>
+			        <p>No longer was individual thought and action the motor of social and cultural progress; instead giant organizations and institutions overpowered individuals. The era corresponds to the staid, conformist, and conservative world of corporate capitalism that was dominant in the 1950s with its organization men and women, its mass consumption, and its mass culture. Mass culture and communication generated a highly organized and massified social order. </p>
+			        <p>&nbsp;</p>
+			        <p>Thus, the Frankfurt School theorized a 'culture industry' in which mass consumption and mass culture produced a consumer society based on homogeneous needs and desires for mass-produced products and a mass society based on social organization and homogeneity. It is culturally the era of highly controlled network radio and television, insipid top forty pop music, glossy Hollywood films, national magazines, and other mass-produced cultural artifacts.</p>
+			        <p>&nbsp;</p>
+                    <p><strong>Further reading:</strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/Media_culture" target="_blank">Link 1</a><br>
+                  <a href="http://www.chegg.com/homework-help/definitions/mass-culture-47" target="_blank">Link 2</a><br>
+                  <a href="http://pages.gseis.ucla.edu/faculty/kellner/papers/fs.htm" target="_blank">Link 3</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Frankfurt_School" target="_blank">Link 4</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Culture_industry" target="_blank">Link 5</a><br>
+                  <a href="http://www.marxists.org/reference/archive/adorno/1944/culture-industry.htm" target="_blank">Link 6</a><br>
+		        </div>
+		    </li>
+          
+           <li class="acc-header2" id="gate"> 
+		        <a href="#gate">Gatekeeping Theory </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/shaw.png" alt="Donald Shaw"><br></div>
+		            <p>&nbsp;</p>
+		            <p><strong>Theorist:</strong> The concept of Gatekeeping has its origins in Kurt Zadek Lewin’s studies in social psychology conducted in late 19th century. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Theory Development:</strong> McCombs &amp; Shaw in 1970s linked the Gatekeeping concept to agenda setting by the media. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Theory Explanation:</strong> Gatekeeping in media is the selection of news based on the salience of the news and a particular media's in-house agenda. In short, it is the news evaluation and filtering process in a news organization.  </p>
+		            <p>&nbsp;</p>
+		            <p>There are four levels of gatekeeping – </p>
+		            <p>at the reporter’s level; </p>
+		            <p>the sub-editor/editor’s level; </p>
+		            <p>the advertiser’s level; </p>
+		            <p>and the media owner’s level. </p>
+		            <p>&nbsp;</p>
+		            <p><strong>Theory Application/Relevance:</strong> Gatekeeping is now an accepted part of media in the dissemination of information and news. It has also become part of organizational language where the management uses gatekeeping in its communications with its employees. </p>
+	              <p>&nbsp;</p>
+		             <p><strong>Further reading: </strong></p>
+		             <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Gatekeeping_(communication)" target="_blank">Link 1</a><br>
+	          		<a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Media,%20Culture%20and%20Society/gatekeeping.doc/" target="_blank">Link 2</a><br>
+	          		<a href="http://41.89.160.5/chisimba/usrfiles/context/ins218/canvases/gatekeeping.pdf" target="_blank">Link 3</a><br>
+	          		<a href="http://wwwchinet.blogspot.in/2012/10/gatekeeping-theory-of-mass-communication.html" target="_blank">Link 4</a><br>
+                    <a href="http://communicationtheory.org/gatekeeping-theory/" target="_blank">Link 5</a><br>
+              		<p>&nbsp;</p>
+		        </div>
+		    </li>
+          
+             <li class="acc-header" id="innis"> 
+	            <a href="#innis">Harold Innis</a>
+		        <div class="acc-content">
+			        <div class="imagePanel"><img src="assets/images/innis.png" width="75%" alt="Innis"></div>
+		          <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Harold Adams Innis - November 5, 1894 - November 8, 1952</p>
+		          <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong></p>
+		          <p>&nbsp;</p>
+			        <p><strong> Staples thesis: </strong>
+			        <p>In his staples thesis, Harold Innis states that the economy of a country is influenced by exploration and exports of raw materials or &quot;staples&quot; as he termed them. With this thesis and his studies on fur, lumber and paper trade in Canada, Innis further postulated that those who control the resources, control power. Hence, if one controls information, one controls power.   
+			        <p>
+			        <p>His most important contribution to media studies is perhaps his concept of space and time biased media.                                         
+			        <p>
+			        <p><strong>Time-biased media : </strong>Innis states that time-biased media are durable, difficult to move, and hence, stable, thus preventing territorial expansion. Since they have a long life, they encourage the expansion of an empire over long periods of time. Time-biased media include clay or stone tablets, hand-copied manuscripts on parchment or vellum and oral sources. Intended to carry stories and messages that last for many generations, but tend to reach limited audiences.   
+			        <p>
+			        <p><strong>Space-biased media : </strong>Space biased media, in turn are light and portable, and can be transported over large distances quickly. Innis states that space biased media repersent secular and territorial empires, but at the same time states that the space biased media are not durable, hence do not encourage urable, long lasting empires. Modern media such as radio, television, and mass circulation newspapers that convey information to many people over long distances, but have short exposure times.   While time-biased media favour stability, community, tradition and religion, space-biased media facilitate rapid change, materialism, secularism and empire.   
+			        <p>
+			        <p><strong>Monopolies of knowledge : </strong>Those who control knowledge, control power. They are also in a position to define what is legitimate knowledge. Monopolies of knowledge tend to polarize societies, and eventually face challenges to their power.                                                                                                                                            
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Harold_Innis" target="_blank">Link 1</a><br>
+                    <a href="http://en.wikipedia.org/wiki/Harold_Innis's_communications_theories" target="_blank">Link 2</a><br>
+                    <a href="http://en.wikipedia.org/wiki/Harold_Innis_and_the_cod_fishery" target="_blank">Link 3</a><br>
+                    <a href="http://www.media-studies.ca/articles/innis.htm" target="_blank">Link 4</a><br>
+                    <a href="http://www.youtube.com/watch?v=5xvSvWg8550" target="_blank">Link 5</a><br>
+                    <a href="http://www.youtube.com/watch?v=FLxBle8QBKY" target="_blank">Link 6</a><br>
+		        </div>
+		    </li>
+            
+            <li class="acc-header2" id="laswell"> 
+		        <a href="#laswell">Harold Laswell’s Model of Communication</a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/lasswell.png" alt="Harold Lasswell" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>Harold Dwight Lasswell</strong>, the American political scientist states that a convenient way to describe an act of communication is to answer the following questions:<br>
+			          <br>
+		              <strong>Who? <br>
+		            Says What? <br>
+		            In Which Channel? <br>
+		            To Whom? <br>
+		            With what effect? </strong><br>
+		            <br>
+			        </p>
+			        <p>This model is about process of communication and its function to society.  <br>
+			          <br>
+		            According to Lasswell there are three functions for communication: <br>
+		            Surveillance of the environment <br>
+		            Correlation of components of society <br>
+		            Cultural transmission between generation <br>
+                    <div class="imagePanel2"><img src="assets/images/laswellmodel.jpg" alt="Lasswell's Model"></div>
+		            <br>
+		            The Lasswell model suggests that the message flows in a multicultural society with multiple audiences. The flow of message is through various channels. This communication model is similar to Aristotle's communication model.  		 		<br>
+		            <br>
+	            In this model, the communication component 'who' refers to the research area called 'Control Analysis', 'says what' refers to 'Content Analysis', 'in which channel' refers to 'Media Analysis', 'to whom' refers to 'Audience Analysis' and 'with what effect' refers to 'Effect Analysis'
+	            <br>
+	            <br>
+	            </p>
+			        <p>
+		         	<strong>Links for more reading: </strong><br>
+		         	<br>
+                	<a href="http://en.wikipedia.org/wiki/Lasswell's_Model_of_Communication" target="_blank">Link 1</a><br>
+                	<a href="http://communicationtheory.org/lasswells-model/ " target="_blank">Link 2</a><br>
+                	<a href="http://itc-maribor.blogspot.in/2012/01/harold-lasswell.html " target="_blank">Link 3</a><br>
+                	<a href="http://zimmer.csufresno.edu/~johnca/spch100/masscomm.htm" target="_blank">Link 4</a><br>
+		        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+           
+            <li class="acc-header" id="hypo"> 
+		        <a href="#hypo">Hypodermic Needle Theory</a>
+		        <div class="acc-content">
+                	<div class="imagePanel"><img src="assets/images/hypodermic.jpg" alt="Hypodermic Needle Theory" ></div>
+		          <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> The theory dates back to the advent of mass media in the 1930s and was the result of mass perceptions rather than being based in scientific or empirical studies </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Development:</strong> The theory is also known as 'Direct Response' theory, or the 'Magic Bullet' theory. Far from being established, the Hypodermic Needle Theory was disproved through various studies, and is considered redundant today. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Perhaps the most dramatic of the media effects theories, the Hypodermic Needle Theory literally draws from the mental image of a needle being injected directly into an individual's brain or a bullet being shot straight into the head. The theory, thus proposes that the mass media, has a similar effect on people where media messages had a direct, inescapable impact on a largely passive audience. </p>
+			        <p>&nbsp;</p>
+			        <p>Critique of the Theory: Paul Lazarsfeld led a study in 1944 during the American Presidential election to determine whether media messages of the campaign had any impact on voters. The study found the media had no impact whatever on voters' decision on who they voted for. This study effectively disproved the Hypodermic Needle Theory.</p>
+		          <p>&nbsp;</p>
+		          <p><strong>Further reading:</strong>                    
+			        <p><br>
+			          <a href"http://en.wikipedia.org/wiki/Hypodermic_needle_model" target="_blank">Link 1</a><br><br>
+			          <a href"http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Mass%20Media/Hypodermic_Needle_Theory.doc/" target="_blank">Link 2</a><br><br>
+			          <a href"http://www.youtube.com/watch?v=Qt5MjBlvGcY" target="_blank">Link 3</a><br><br>
+			          <a href"http://communicationtheory.org/magic-bullet-or-hypodermic-needle-theory-of-communication/" target="_blank">Link 4</a><br><br>
+		          <p>&nbsp;</p>
+              </div>
+	      </li>
+          
+           
+            <li class="acc-header2" id="rasa"> 
+		        <a href="#rasa">Indian perspectives on communication - Theory of Rasa</a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/rasa.png" alt="Rasa Theory" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>The Theory of Rasa</strong> <strong>– Indian perspectives on communication</strong>  Rasa is the central principle of Indian dramatics and poetics. रस्यतइतिरस: - that which can be tasted (आस्वाद) is Rasa. This is the definition of Rasa. <br>
+			          <br>
+		            There are six kinds of Rasas – कटू (bitter), तिक्त (spicy), कषाय (acrid), मधुर (sweet), लवण (salty), आम्ल (sour).These Rasas can only be experienced by the sense of taste. The food that is made up of all these Rasas is called the six-Rasa-food or षड्रसभोजन. The same idea of taste is applied to drama and poetry. Thus drama and poetry is supposed to have the same 'tastefulness' and hence Rasas. The eight primary Rasas are शृंगार (beauty), हास्य (laughter), करूण (sadness), रौद्र (anger), वीर (bravery), भयानक (dangerous), बीभत्स (obscene), अद्भुत (miraculous). <br>
+		            <br>
+		            Various theorists of Dramatics have propounded more or less Rasas. It is believed that Bharata's Natyashastra is the first work that discusses the form of Rasa process. However, according to Dr G T Deshpande, before Bharata, two Acharyas Druhin and Vasuki also propounded two different Rasa traditions. Bharata restricts himself to the Rasas in Drama.    <br>
+		            <br>
+		            <strong>Theory Application/Relevance</strong>:The Rasa theory is probably the oldest theories that explain communication as well as the connection between a performer and an audience. The theory clearly states that the Rasa resides in the Rasik, one who partakes of the communication experience. Only when a performer and the Rasik are on a common plane is communication is completed.</p>
+		        <p>&nbsp;</p>
+		         <strong>Further reading:</strong><br>
+		         <br>
+                 <a href="http://www.karandikars.com/rasa.htm" target="_blank">Link</a><br>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+       		
+            
+            
+          <li class="acc-header" id="kgt"> 
+		        <a href="#kgt">Knowledge Gap Theory </a>
+		        <div class="acc-content">
+	                <div class="imagePanel"><img src="assets/images/tichenordonahue.png" alt="ATichenor-Donahue" ></div>
+		            <p><strong>Theorist:</strong> Phillip J. Tichenor, George A. Donohue and Clarice N. Olien proposed the theory in the 1970s </p>
+	              <p>&nbsp;</p>
+		            <p><strong>Theory Explanation:</strong> The Knowledge Gap Theory / Hypothesis proposes that just like the other forms of wealth, the distribution of knowledge in the society is also differential; meaning, some people have more knowledge than others. Mass media messages tend to increase the gap between people from higher socio-economic segments of the society and those from the lower socio-economic strata. In other words, it suggests that people in higher income groups have access to more information, and are thus able to process information better because of their higher education levels; and that people in lower income groups remain poorer in knowledge because they do not have easy access to information. The theory establishes that infusion of media messages only work to widen this gap between the rich and the poor as more information enters a society.</p>
+		            <p>&nbsp;</p>
+		            <p><strong>Theory Application/Relevance:</strong> Understanding the knowledge gap in society helps in targetting specific audiences for specific messages.  </p>
+	              <p>&nbsp;</p>
+	              <p><strong>Further reading:</strong>                    
+		            <p><br>
+		              <a href="http://en.wikipedia.org/wiki/Knowledge_gap_hypothesis" target="_blank">Link 1</a><br>
+		              <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Media,%20Culture%20and%20Society/knowledge_gap.doc/" target="_blank">Link 2</a><br><br>
+		              <a href="http://communicationtheory.org/knowledge-gap-theory/" target="_blank">Link 3</a><br><br>
+		              <a href="http://www.oxfordbibliographies.com/view/document/obo-9780199756841/obo-9780199756841-0078.xml;jsessionid=D7155ECEBAFBF68255F8FB69A16E1E26" target="_blank">Link 4</a><br><br>
+		              <a href="http://www.zeepedia.com/read.php?knowledge_gap_theory_criticism_on_marshal_mcluhan_theories_of_communication&b=81&c=37" target="_blank">Link 5</a><br><br>
+	              <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+             <li class="acc-header2" id="let"> 
+		        <a href="#let">Language Expectancy Theory </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/miller.png" alt="Miller"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Michael Burgoon, Jones and Stewart (1975) </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> The Language Expectancy Theory is basically a persuasion theory. It is about communication strategies, attitude and behavior change and how expectancies about the language affect understanding in the process of persuasion. The theory assumes that language has a certain pattern of rules which when used in a manner that goes against the general expectancy, is likely to have a different impact on the receiver of the message.</p>
+			        <p>&nbsp;</p>
+			        <p>The expectations of communication are derived from: </p>
+			        <p>1) the Communicator; </p>
+			        <p>2) the Relationship; and </p>
+			        <p>3) the Context of Situation. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> The Theory is applicable in all forms of social and organizational communications. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+              		<a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Language_Expectancy_Theory.doc/" target="_blank">Link 1</a><br>
+	          		<a href="http://en.wikipedia.org/wiki/Language_expectancy_theory" target="_blank">Link 2</a><br>
+	          		<a href="http://communicationtheory.org/language-expectancy-theory/" target="_blank">Link 3</a><br>
+	          		<a href="http://changingminds.org/explanations/theories/language_expectancy.htm" target="_blank">Link 4</a><br>
+                    <a href="http://commfaculty.fullerton.edu/rgass/492T%20S2002/Language%20Expectancy%20Theory_files/v3_document.htm" target="_blank">Link 5</a><br>
+              		<p>&nbsp;</p>
+              </div>
+	      </li>
+          
+            <li class="acc-header" id="mcluhan"> 
+	            <a href="#mcluhan">Marshall McLuhan - Understanding Media </a>
+		        <div class="acc-content">
+			        <div class="imagePanel"><img src="assets/images/marshallmcluhan.png" width="75%" alt="mcluhan"></div>
+		          <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Marshall McLuhan - July 21, 1911 - December 31, 1980. McLuhan was a Canadian philosopher of Communication Theory.</p>
+		          <p>&nbsp;</p>
+			        <p><strong>The Medium is the Message</strong> : McLuhan proposed that media themselves, and not the content they carry, should be the focus of study. The media itself is more significant than the content carried by that medium. </p>
+			        <p>&nbsp;</p>
+			        <p>In his The Gutenberg Galaxy, he explains how communication technology 'alphabetic writing, the write downing press, and the electronic media' affects cognitive organization, which in turn has profound ramifications for social organization.   </p>
+			        <p>&nbsp;</p>
+			        <p><strong>The Global Village</strong>: McLuhan visualized world connected by an electronic network, forming a 'nervous system' like that of a living organism, and that events in one part, would affect the whole world. He saw the Internet as an extension of the human central nervous system. Based on this concept, he called the world a 'global village'. In this new age, according to McLuhan, mankind will evolve from an individualistic and fragmented society to newer communities, having a collective identity, with a 'tribal base.' McLuhan's called this new social organization as the global village. In a almost prophetic conceptualization, McLuhan saw the world as a global village connected by virtual media. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Ratio of Senses</strong>: McLuhan propounded that technology is an extension of a human faculty – like the wheel is an extension of the foot; a book is an extension of the eye; clothing an extension of the skin; and so on. In this context, he coined the terms &quot;hot&quot; and &quot;cool&quot; media, referring to the different sensory effects associated with media of higher or lower definition.   </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance</strong>: Although controversial at the time when he wrote them, McLuhan's communication concepts are relevant today in understanding new media.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Marshall_McLuhan" target="_blank">Link 1</a><br>
+                    <a href="http://www.marshallmcluhan.com/" target="_blank">Link 2</a><br>
+                    <a href="http://marshallmcluhanspeaks.com/" target="_blank">Link 3</a><br>
+                    <a href="http://www.youtube.com/watch?v=ImaH51F4HBw" target="_blank">Link 4</a><br>
+                    <a href="http://www.leaderu.com/orgs/probe/docs/mcluhan.html" target="_blank">Link 5</a><br>
+                    <a href="http://www.gingkopress.com/02-mcl/z_mcluhan-and-the-senses.html" target="_blank">Link 6</a><br>
+		        </div>
+		    </li>
+            
+           
+            
+            
+            
+            <li class="acc-header2" id="mc"> 
+		        <a href="#mc">Manufacturing Consent </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/chomsky.png" width="75%" alt="Chomsky"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Noam Chomsky and Edward S. Herman came up with this term in their analysis of the news media as a business, in 1988 </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Manufacturing Consent takes off on the propaganda model of communication and states that corporate-owned news media are businesses that are subject to commercial competition for advertising revenue and profit. Talking in particular about American Media, Chomsky says that media have 'filters' in the form of owners, advertisers, news makers and news shapers, which together determine media content, often without dissenting voices.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Relevance:</strong> Chomsky's theory holds true to a large extent with hegemonic control over traditional media; however, that is changing with the proliferation of new media. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading:</strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/Manufacturing_Consent:_The_Political_Economy_of_the_Mass_Media" target="_blank">Link 1</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Manufacturing_Consent:_Noam_Chomsky_and_the_Media" target="_blank">Link 2</a><br>
+                  <a href="http://www.youtube.com/watch?v=PQhEBCWMe44" target="_blank">Link 3</a><br>
+                  <a href="http://www.chomsky.info/interviews/1992----02.htm" target="_blank">Link 4</a><br>
+                  <a href="http://hope.journ.wwu.edu/tpilgrim/j190/Chomsky.summary.html" target="_blank">Link 5</a><br>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="mrt"> 
+		        <a href="#mrt">Media Richness Theory </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/daft.png" alt="Richard Daft" ></div>
+			        <p><strong>Theorist:</strong> Richard L. Daft and Robert H. Lengel developed the theory in 1984 based on Galbraith’s 1977 theory of information processing. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Theory Development:</strong> Media Richness Theory did not initially consider the new media, but was later incorporated into its framework. The theory is more relevant today considering the extensive usage of new media and the Internet.  </p>
+			        <p>&nbsp;</p>
+                    <p><img src="assets/images/mediarichness.png" width="100%"></p>
+                  <p>(Image Source: Wikipedia page on Media Richness Theory)</p>
+			        <p><strong>Theory Explanation:</strong> Media Richness Theory (MRT) is also called the Information Richness theory. It is a framework that is used to describe how well media can reproduce information. The assumption is that the richer the capacity of the medium to transmit multiple symbolic cues without loss of information or distortion, the better the communication. For example, face-to-face communication is considered the richest medium, while online text-based communication is said to be less rich than other media such as the telephone and video-conferencing. The theory was originally used to explain the efficiency of communication in organisations.<br>
+			          <br>
+			          The theory was originally used to explain the efficiency of communication in organisations. 
+			        </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> MRT is applicable in any organization using any form of communication. It can help in deciding which mode of communication is to be used for specific tasks.</p>
+			        <p>&nbsp;</p>
+		          <p><strong>Further reading:</strong>                     
+			         <p><br>
+			           <a href="http://en.wikipedia.org/wiki/Media_richness_theory" target="_blank">Link 1</a><br>
+			           <a href="http://learngen.org/Resources/lgend101_norm1/200/210/211_3.html" target="_blank">Link 2</a><br>
+			           <a href="http://www.campus-adr.net/ODRmodule/media_richness_theory.html" target="_blank">Link 3</a><br>
+			           <a href="http://www.facultyfocus.com/articles/online-education/media-richness-and-communication-in-online-education/" target="_blank">Link 4</a><br>
+			           <a href="http://isr.journal.informs.org/content/9/3/256" target="_blank">Link 5</a><br>
+			           <a href="http://blog.timebarrow.com/2009/09/media-richness-theory/" target="_blank">Link 6</a><br>
+	              <p>&nbsp;</p>
+		        </div>
+		        
+		    </li>
+            
+            <li class="acc-header2" id="medt"> 
+		        <a href="#medt">Medium Theory </a>
+		        <div class="acc-content">
+               	  <div class="imagePanel"><img src="assets/images/JoshuaMeyrowitz.png" alt="Joshua Meyrowitz" ></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Joshua Meyrowitz was the first to coin the term Medium Theory in 1985. Long before Meyrowitz, however, it was Marshall McLuhan who in 1963 talked about the transformative effects of the medium on people's lives. </p>
+		          	<p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Meyrowitz prefers to use 'Medium Theory' rather than 'Media Theory' mainly because what makes it different from most other media theories is its focus on the characteristics of each individual medium or of each particular type of media. Medium theorists are interested in differentiating among media. Broadly speaking, media theorists ask: what are the relatively fixed features of each means of communicating and how do these features make the medium physically, psychologically, and socially different from other media and face-to-face interaction? 
+			        <p>
+			        <p>The Medium Theory, instead of treating media in general, studies a specific medium, and its contribution to social change. Marshall LcLuhan revolutionized media studies when he famously said, &quot;Medium is the message&quot;. McLuhan believed that the introduction of any new media changes the way people live. Thus, Medium Theory focuses on the technological aspects of media rather than on the content; and the social impact of that technology.                                         
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> The Medium Theory is retains its relevance and with the constantly evolving new media technologies; the theory helps to understand the cultural transformation of the new media world. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading:</strong>                    
+			        <p><br>
+			          <a href="http://www.jpwalter.com/machina/?p=20" target="_blank">Link 1</a><br>
+			          <a href="http://media-ecology.org/publications/MEA_proceedings/v2/Meyrowitz02.pdf" target="_blank">Link 2</a><br>
+			          <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Media,%20Culture%20and%20Society/Medium_theory-1.doc/" target="_blank">Link 3</a><br>
+			          <a href="http://en.wikipedia.org/wiki/Marshall_McLuhan" target="_blank">Link 4</a><br>
+		          <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+             <li class="acc-header" id="nmt"> 
+		        <a href="#nmt">Normative Media Theories </a>
+		        <div class="acc-content">
+                 <div class="imagePanel"><img src="assets/images/siebert.png" alt="Fred Siebert" ></div>
+			        <p><strong>Theorist:</strong> Fred Siebert, Theodore Peterson and Wilbur Schramm 1956 </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Generally, media theories refer to the relationships between the media and the society, along with the social, political and philosophical principles that govern these entities. Normative theories, in turn, deal with what the media ought to do in society rather than what it actually does. They deal specifically with who controls the media. </p>
+			        <blockquote>
+			          <p>&nbsp;</p>
+		          </blockquote>
+			        <p>The theorists defined the Four Theories of the Press based on the socio-political structures it operates on:  <br>
+		            (1) The Authoritarian Theory, where the government or the autocratic ruling authorities control the media;  <br>
+		            (2) The Soviet Theory, where the media is free to write what it wants but has to conform to the communist ideology of the state;  <br>
+		            (3) Libertarian Theory, where the Press is completely free from any government restrictions;  <br>
+		            (4) Social Responsibility Theory, where the Press is a modified version of free press theory but with an emphasis on accountability to society.   <br>
+		            <br>
+		            The non-aligned countries, which were committed to social and economic development on their own terms, discarding the existing socio-political models. Hence two more theories were added:</p>
+			        <p>&nbsp;</p>
+			        <p>Development Communication Theory: This theory states that there can be no development without communication. According to this theory, the media was considered to be responsible in carrying out developmental programmes, and also governed by certain rules and restriction from the state. The weakness of this theory is that 'development' is often equated with government propaganda.     </p>
+			        <p>&nbsp;</p>
+			        <p>Democratization/Democratic Participant Media Theory: This theory opposes the commercialization of the media, at the same time resists bureaucratic control of the media.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> The Normative Media Theories may seem a bit redundant with the proliferation of new media. But they still help understand the government-corporate owners-society equations. </p>
+		          <p>&nbsp;</p>
+			        <strong>Links for more reading:<br>
+			        </strong><br>
+               	  <a href="http://www.le.ac.uk/oerresources/media/ms7501/mod2unit11/page_07.htm" target="_blank">Link 1</a><br>
+				  <a href="http://www.h-net.org/reviews/showrev.php?id=29390" target="_blank">Link 2</a><br>
+				  <a href="http://www.peoi.org/Courses/Coursesba/mass/mass2.html" target="_blank">Link 3</a><br>
+                  <a href="http://www.docstoc.com/docs/22087889/Normative-Theories-of-Mass-Communication" target="_blank">Link 4</a><br>
+                  <a href="http://ccms.ukzn.ac.za/index.php?option=com_content&task=view&id=939&Itemid=145" target="_blank">Link 5</a><br>
+		        	<p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+             <li class="acc-header2" id="pert"> 
+		        <a href="#pert">Persuasion Theory </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/persuasion.png" alt="Persuasion"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist: </strong>Persuasion theories have their roots in Aristotle’s Rhetoric </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Persuasion is a form of social influence. It is a process of subtly or overtly guiding oneself or another toward the adoption of an idea. It is a form of human communication that is designed to influence others by modifying their beliefs, values or attitudes. </p>
+			        <p>&nbsp;</p>
+			        <p>There are various methods of persuasion: </p>
+			        <p>(1) Reciprocity – Reciprocation produces a sense of obligation and is a powerful tool in persuasion; </p>
+			        <p>(2) Commitment &amp; Consistency – The concept is that if people commit to something, they are most likely to honor it; </p>
+			        <p>(3) Social Proof – People are persuaded by what others around them in the society are doing; </p>
+			        <p>(4) Authority – People have a tendency to believe authoritative figures or experts; </p>
+		          <p>(5) Liking – People do things simply because they like the person persuading them to do it; </p>
+			        <p>(6) Scarcity – scarcity or limited availability of something makes it more valuable for people to want it more. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> Persuasion is extensively used in media marketing communication. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Persuasion" target="_blank">Link 1</a><br>
+	          		<a href="http://communicationmodel.blogspot.in/2010/01/persuasion-theory-definition.html" target="_blank">Link 2</a><br>
+	          		<a href="http://faculty.business.utsa.edu/ljshrum/Dillard%20Ch19_FN%20to%20Publisher.pdf" target="_blank">Link 3</a><br>
+	          		<a href="http://changingminds.org/explanations/theories/a_persuading.htm" target="_blank">Link 4</a><br>
+                    <a href="http://www.youtube.com/watch?v=0CV0OmiwJbc" target="_blank">Link 5</a><br>
+              		<p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="prime"> 
+		        <a href="#prime">Priming Theory</a>
+	          <div class="acc-content">
+			        <div class="imagePanel"><img src="assets/images/sotu_iyengar_news.png" alt="shanto iyengar"></div>
+			          <br>
+	                <strong>This is more of a concept than a theory</strong></strong><br>
+			          <br>
+		            Priming is a concept in psychology which states that responses to a stimulus might be based on exposure to a prior stimulus. The memory is thus 'primed' to respond to the stimulus based on earlier experience. The human brain is thus, primed to notice things that it would normally overlook because of the new knowledge it has acquired.<br><br>
+                    Shanto Iyengar, Mark Peters &amp; Donald Kinder coined the term Priming Theory for media in 1982.<br>
+                    Theory Explanation: For believers of the Priming Theory, media has the power to control and influence how the viewers will understand and interpret the new information. This theory should be studied in conjunction with other theories like Agenda Setting, Persuasion and Manufacturing Consent<br><br>
+                    <strong>Theory Application/Relevance:</strong> The priming theory has relevance in news pertaining to politics and current affairs, as well as commercial advertisements<br>
+                    <br>
+<p><strong>Further reading:</strong></p>
+<p><br>
+  <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Communication%20Processes/Priming.doc/" target="_blank">Link 1</a><br>
+  <a href="http://www.communicationstudies.com/communication-theories/priming" target="_blank">Link 2</a><br>
+  <a href="http://faculty.buffalostate.edu/smithrd/PR/Framing.htm" target="_blank">Link 3</a><br>
+  <a href="http://en.wikipedia.org/wiki/Priming_(media)" target="_blank">Link4</a><br>                   
+  &nbsp;&nbsp;<br>
+</p>
+              </div>
+          </li>
+          
+             
+            <li class="acc-header2" id="pt"> 
+		        <a href="#pt">Propaganda Theories </a>
+		        <div class="acc-content">
+                <div class="imagePanel2"><img src="assets/images/propaganda.png" width="75%" alt="Propaganda"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Walter Lippman, Harold Lasswell, Jacques Ellul and Edward Bernays were the earliest theorists to propound propaganda theories in the early 1900s. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Propaganda is a mass communication tool that is used to influence mass opinion. The idea of propaganda took on a negative connotation during World War II with the German dictator Adolf Hitler using it extensively to propagate Nazi ideology.   Propaganda uses loaded messages ostensibly to produce emotional, rather than rational, response from a people. It is a method or approach to spread ideas that further either a political, commercial, religious or civil cause. </p>
+			        <p>&nbsp;</p>
+			        <p>Lippman was of the view that in order to conduct propaganda there must be some barrier between the public and the event, which is where the media comes in to manipulate events by presenting limited information to the public and creating a pseudo environment.   </p>
+			        <p>&nbsp;</p>
+			        <p>There are three types of propaganda: <br>
+		            1) White Propaganda, where information comes from a known source; <br>
+		            2) Grey Propaganda, where the source of information is not identified; <br>
+		            3) Black Propaganda, where information appears to come from one source when it actually comes from another.   </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance</strong>: Propaganda is most commonly used through various forms of media by governments to convince the public about welfare schemes, policies or new legislation. Propaganda is also used to spread religious ideologies; for marketing new lifestyle products.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading:</strong></p>
+                    <p>&nbsp;</p>
+               	  <a href="http://en.wikibooks.org/wiki/Communication_Theory/Propaganda_and_the_Public" target="_blank">Link 1</a><br>
+               	  <a href="http://www.zeepedia.com/read.php?propaganda_theories_origin_of_propaganda_engineering_of_consent_behaviorism_theories_of_communication&b=81&c=10" target="_blank">Link 2</a><br>
+               	  <a href="http://www.propagandatheory.com/" target="_blank">Link 3</a><br>
+               	  <a href="http://www.chomsky.info/onchomsky/20031209.htm" target="_blank">Link 4</a><br>
+               	  <a href="http://www.chomsky.info/onchomsky/20031209.htm" target="_blank">Link 5</a><br>
+               	  <a href="http://www.academia.edu/819415/The_Propaganda_Model_Theoretical_and_Methodological_Considerations" target="_blank">Link 6</a><br>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="publicsphere"> 
+		        <a href="#publicsphere">Public Sphere</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/habermas.png" width="75%" alt="Habermas"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> The Public Sphere is a concept extensively elaborated upon by Jurgen Habermas in his work The Structural Transformation of the Public Sphere in 1962. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Concept Explanation:</strong> A Public Sphere was a place where individuals and government officials could have a frank and an open discussion / debate about critical public interest matters. The coffee houses of Britain or the French salons served as ideal public spheres. It is made up of private people gathered together as a public and voicing their opinions and needs of the society to the State. </p>
+			        <p>&nbsp;</p>
+			        <p>The public sphere mediates between the &quot;private sphere&quot; and the &quot;Sphere of Public Authority&quot;. The concept of Public Sphere involved primarily 1. Disregard of status 2. Domain of common concern 3. Inclusivity.   It began to emerge in the 18th century and comprised bourgeois debates, although in spirit it was meant to bring together both elite and common voices on an informal but equal platform.   </p>
+			        <p>&nbsp;</p>
+			        <p>The key features of a public sphere were the extent of access; the degree of autonomy; the rejection of hierarchy; rule of law; and the quality of participation. The public sphere collapsed with the advent of mass media, which did not initiate much public debate owing to commercialization.   The rhetorical public sphere was characterized by five norms under the rhetorical model. </p>
+			        <p>&nbsp;</p>
+			        <p>Those norms are: <br>
+		            1. permeable boundaries <br>
+		            2. activity <br>
+		            3. contextualized language <br>
+		            4. believable appearance <br>
+		            5. tolerance   </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Relevance: </strong>In the post-modern world, however, the public sphere is re-emerging in its virtual form on social networking sites.</p>
+			        <p>&nbsp;</p>
+                    <p><strong>Further reading: </strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/Jürgen_Habermas" target="_blank">Link 1</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Public_sphere" target="_blank">Link 2</a><br>
+                  <a href="http://en.wikipedia.org/wiki/The_Structural_Transformation_of_the_Public_Sphere" target="_blank">Link 3</a><br>
+                  <a href="http://pages.uoregon.edu/koopman/courses_readings/phil123-net/publicness/habermas_structural_trans_pub_sphere.pdf" target="_blank">Link 4</a><br>
+                  <a href="http://culturalstudiesnow.blogspot.in/2011/09/jurgen-habermass-public-sphere.html" target="_blank">Link 5</a><br>
+                  <a href="http://pages.gseis.ucla.edu/faculty/kellner/papers/habermas.htm" target="_blank">Link 6</a><br>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header2" id="tra"> 
+		        <a href="#tra">Reasoned Action or Planned Behavior</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/ajzen.png" alt="Ajzen"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Icek Ajzen and Martin Fishbein formulated the theory in 1975, 1980 from earlier research related to the theory of attitude. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> With its roots in social psychology, the Theory of Reasoned Action (TRA) deals with human behavior. TRA links attitude, intention and behavior. </p>
+			        <p>&nbsp;</p>
+			        <p>It posits that a person’s attitude is formed on the basis of </p>
+			        <p>1) Behavioral beliefs, </p>
+			        <p>2) Normative beliefs, and </p>
+			        <p>3) Control beliefs. </p>
+			        <p>&nbsp;</p>
+			        <p>TRA refers to a type of peer pressure where a person participates or intends to participate in a particular behavior because of a strong influence from the people around him. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> TRA is used in social sciences research. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+              		<a href="http://people.umass.edu/aizen/faq.html" target="_blank">Link 1</a><br>
+	          		<a href="http://sph.bu.edu/otlt/MPH-Modules/SB/SB721-Models/SB721-Models3.html" target="_blank">Link 2</a><br>
+	          		<a href="http://www.slideshare.net/krissyk/theory-of-planned-behavior" target="_blank">Link 3</a><br>
+	          		<a href="http://www.tcd.ie/civileng/Staff/Brian.Caulfield/T2%20-%20Transport%20Modelling/The%20Theory%20of%20Planned%20Behaviour.pdf" target="_blank">Link 4</a><br>
+					<p>&nbsp;</p>
+		        </div>
+		    </li>
+      
+            <li class="acc-header" id="spiral"> 
+		        <a href="#spiral">Spiral of Silence </a>
+		        <div class="acc-content">
+                	<div class="imagePanel"><img src="assets/images/neumann.png" alt="Elisabeth Noelle-Neuman" ></div>
+			        <p><strong>Theorist:</strong> Elisabeth Noelle-Neuman propounded the theory in 1974. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Spiral of Silence theory describes the process by which people who feel that their opinion is in a minority against the dominant majority opinion, tend to keep silent and do not speak up because of fear of isolation, and perhaps, ridicule. Neumann says that people have an intuitive sense or a 'quasi-statistical organ' to gauge prevailing public opinion. The closer their own opinion is to the perceived public opinion, the more likely they are to voice their opinion; and if they find their views/opinions to be different from popular opinion, they tend to remain silent. </p>
+			        <p>&nbsp;</p>
+                    <img src="assets/images/spiralofsilence.png" width="95%" alt="Spiral of Silence">
+					<p>Neumann theorized that mass media tends to deepen the spiral by influencing popular opinion. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> The Spiral of Silence is more pronounced today in the virtual world where people on social networking sites tend to sway with majority opinion or 'likes' than risk being isolated by their online communities. </p>
+			        <p>&nbsp;</p>
+		          <p><strong>Further reading:</strong>                  
+		          <p><br>
+		            <a href="http://www.afirstlook.com/docs/spiral.pdf" target="_blank">Link 1</a><br>
+		            <a href="http://highered.mcgraw-hill.com/sites/0767430344/student_view0/chapter24/" target="_blank">Link 2</a><br>
+		            <a href="http://www.uky.edu/~drlane/capstone/mass/spiral.htm/" target="_blank">Link 3</a><br>
+		            <a href="http://en.wikipedia.org/wiki/Spiral_of_silence" target="_blank">Link 4</a><br>
+	              <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            <li class="acc-header2" id="technopoly"> 
+		        <a href="#technopoly">Technopoly</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/postman.png" alt="Neil Postman"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist: </strong>Neil Postman coined the term Technopoly in his 1992 book Technopoly: The Surrender of Culture to Technology. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Concept Explanation:</strong> A Technopoly is a society that worships technology. As Postman says, it is a culture that seeks its authorization in technology, finds its satisfaction in technology, and takes its orders from technology. Postman defines Technopoly as a submission of all forms of cultural life to the sovereignty of technique and technology, and that it reduces human life to finding meaning in machines. In the context of media, Postman argued that information endlessly generated by technologies results in information glut. </p>
+	          		<p>&nbsp;</p>
+			        <p><strong>Relevance:</strong> Although Postman might have many critics in the post-modern world of information technology, his arguments hold true in the techno-cultural society that people live in today.</p>
+		          <p>&nbsp;</p> 
+                    <p><strong>Further reading: </strong></p>
+                    <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Technopoly" target="_blank">Link 1</a><br>
+	          		<a href="http://www.ibiblio.org/cmc/mag/1995/mar/hyper/npcontexts_119.html" target="_blank">Link 2</a><br>
+	          		<a href="http://kyletjantzen.wordpress.com/2012/11/03/neil-postmans-technopoly-twenty-years-later/" target="_blank">Link 3</a><br>
+	          		<a href="http://www.c-spanvideo.org/program/31627-1" target="_blank">Link 4</a><br>
+              		<a href="http://www.ucs.mun.ca/~emurphy/stemnet/technop.html" target="_blank">Link 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+              </div>
+	      </li>
+            
+            <li class="acc-header" id="commtypes"> 
+		        <a href="#commtypes">Types of Communication</a>    
+	          <div class="acc-content">
+                <p>&nbsp;</p>
+			        <p><strong>Types of Communication</strong> <br>
+			          <br>
+		            <strong></strong>Verbal - The sharing of information between two or more individuals, essentially involving speech </p>
+			        <p>&nbsp;</p>
+			        <p>Non verbal - Sharing of information by using non-verbal modes like a glance, a gesture, facial expression, posture, smell, etc  </p>
+			        <p>&nbsp;</p>
+			        <p>Intrapersonal Communication - This is a process of communicating with oneself. Please also see cognitive dissonance theory  </p>
+			        <p>&nbsp;</p>
+			        <p>Interpersonal communication - An interchange of ideas or information between two or more people  </p>
+			        <p>&nbsp;</p>
+			        <p>Group Communication - Communication that occurs within a group of people </p>
+			        <p>&nbsp;</p>
+			        <p>Mass communication - Communication which is meant for the masses  </p>
+			        <p>&nbsp;</p>
+			        <p>Mass-line communication - A Maoist strategy of communication evolved during the Chinese revolution and involved propaganda<br>
+			          <br>
+		            <strong>Online resources for further reading:</strong></p>
+			        <p><br>
+			          <a href="http://www.andrews.edu/~tidwell/bsad560/NonVerbal.html" target="_blank">Link 1</a><br> 
+			          <a href="http://en.wikipedia.org/wiki/Nonverbal_communication" target="_blank">Link 2</a><br> 
+			          <a href="http://nonverbal.ucsc.edu/" target="_blank">Link 3</a><br> 
+			          <a href="http://library.thinkquest.org/04oct/00451/nonverbalcom.htm" target="_blank">Link 4</a><br> 
+			          <a href="http://examples.yourdictionary.com/examples-of-non-verbal-communication.html" target="_blank">Link 5</a><br> 
+			          <a href="http://aiic.net/page/1662/the-importance-of-non-verbal-communication-in-professional-interpretation/lang/1" target="_blank">Link 6</a><br> 
+			          <a href="http://en.wikipedia.org/wiki/Mass_line" target="_blank">Link 7</a><br> 
+			          <a href="http://en.wikipedia.org/wiki/Verbal_communication" target="_blank">Link 8</a><br> 
+			          <a href="http://en.wikipedia.org/wiki/Mass_communication" target="_blank">Link 9</a><br> 
+			          <a href="http://www.wisegeek.org/what-is-mass-communications.htm" target="_blank">Link 10</a><br> 
+			          <a href="http://sjmc.umn.edu/ugrad/whatismasscomm.html" target="_blank">Link 11</a><br> 
+			          <a href="http://download.nos.org/srsec335new/ch2.pdf" target="_blank">Link 12</a><br>
+	            </p>
+			        <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+            <li class="acc-header2" id="tsft"> 
+		        <a href="#tsft">Two Step Flow Theory </a>
+		        <div class="acc-content">
+               	  <div class="imagePanel"><img src="assets/images/lazarsfeldandkatz.png" alt="Paul Lazarsfeld and Elihu Katz" ></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Paul Lazarsfeld and Elihu Katz developed the Two Step Flow Theory in 1955, taking off from the findings of a study on media effects conducted by Lazarsfeld, Bernard Berelson and Hazel Gaudet in 1944.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> The Two Step Flow Theory assumes that while the media does not have a direct influence on people (as assumed in the Magic Bullet Theory), it channels its messages through opinion leaders to influence public opinion. The 1944 'People's Choice Study' established that the media messages had no impact on voters' decision with regard to who they voted for in the Presidential elections. Rather, it was the personal and informal contacts that had more of an impact on voting behavior. </p>
+			        <p>&nbsp;</p>
+			        <p>The Two Step Flow Theory posits two stages in the way we receive mass media messages: </p>
+			        <p>1) Opinion leaders take the messages and information put out by the media; </p>
+			        <p>2) They then pass it on with their own interpretation to the people.</p>
+		          <p>&nbsp;</p>
+			        <p><strong> Theory Application/Relevance: </strong>This theory helps understand the effects of all kinds of media including radio, television and the Internet, especially pertaining to political messages.</p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Two-step_flow_of_communication" target="_blank">Link 1</a><br>
+					<a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Mass%20Media/Two_Step_Flow_Theory-1.doc/" target="_blank">Link 2</a><br>
+					<a href="http://www.youtube.com/watch?v=cMjaekolB9g" target="_blank">Link 3</a><br>
+					<a href="http://lessonbucket.com/media-in-minutes/the-two-step-flow-theory/" target="_blank">Link 4</a><br>
+					<a href="http://communicationtheory.org/two-step-flow-theory-2/" target="_blank">Link 5</a><br>
+                    <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            
+            <li class="acc-header" id="st"> 
+		        <a href="#st">Semiotic Theory </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/sassure.png" alt="Sassure"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Semiotic Theory was developed by Ferdinand de Sassure (1857-1913) and C.S. Peirce (1839-1914). Other notable researchers who worked on Semiotics are Noam Chomsky, Umberto Eco, Roland Barthes and Jean Baudrillard. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Semiotics is the theory and description of sign systems. The theory assumes that &quot;all symbolic systems in a culture function like a second-order language or text.&quot; This sign system is intrinsic to prevalent cultures and is an irrevocable part of people's daily lives. The signs and their meanings are so encoded in the messages that it is for each individual to decode them for their symbolism taking from the local or universal cultural encyclopedia. The signs thus are culturally symbolic and open to interpretation, and are not based on any rules. </p>
+			        <p>&nbsp;</p>
+			        <p>There are three branches of semiotics: </p>
+			        <p>1) Semantics (relation between signs and things); </p>
+			        <p>2) Syntactics (relation among signs); and </p>
+			        <p>3) Pragmatics (relation between signs and their effects on people). </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> Semiotics is used in everyday communication from voice and printed texts to mass media images, music, movies, web content and digital multimedia. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Semiotics" target="_blank">Link 1</a><br>
+	          		<a href="http://www.aber.ac.uk/media/Documents/S4B/semiotic.html" target="_blank">Link 2</a><br>
+	          		<a href="http://www.uvm.edu/~tstreete/semiotics_and_ads/terminology.html" target="_blank">Link 3</a><br>
+	          		<a href="http://carbon.ucdenver.edu/~mryder/itc/semiotics.html" target="_blank">Link 4</a><br>
+              		<a href="http://www.youtube.com/watch?v=rEgxTKUP_WI" target="_blank">Link 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            <li class="acc-header2" id="shannon"> 
+		        <a href="#shannon">Shannon Weaver Model</a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/shannonweaver.png" alt="Shannon and Weaver" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>The Shannon–Weaver model </strong>of communication is often called as the  &quot;mother of all models.&quot; According to the Shannon-Weaver Model there are 8 key elements that are required for communication, or information transmission, to occur. <br>
+			          <br>
+                <div class="imagePanel2"><img src="assets/images/shannonmodel.jpg" alt="Shannon Weaver Model"></div>
+                      <br>
+			          These elements are: Source, Encoder, Message, Channel, Decoder, Receiver, Noise, and Feedback. The model is based on a book titled 'A Mathematical Theory of Communication' by Claude Shannon and Warren Weaver, in 1948. Probably the most important element that was included was the 'noise' which can alter the message. This 'noise' could be mechanical, electronic or semantic in nature.<br>
+			          <br>
+			        </p>
+			        <p>
+		         	<strong>Links for more reading: </strong>                    
+			        <p><br>
+			          <a href="http://en.wikipedia.org/wiki/Shannon–Weaver_model" target="_blank">Link 1</a><br>
+			          <a href="http://communicationtheory.org/shannon-and-weaver-model-of-communication/" target="_blank">Link 2</a><br>
+			          <a href="http://www.aber.ac.uk/media/Students/kjr9601.html" target="_blank">Link 3</a><br>
+	            <p>&nbsp;</p>
+	          </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="sleeper"> 
+		        <a href="#sleeper">Sleeper Effect  </a>
+		        <div class="acc-content">
+                <div class="imagePanel2"><img src="assets/images/sleepereffect.jpg" alt="Sleeper Effect"><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Sleeper Effect was identified in the 1930s, but its related concepts were talked about in detail by Carl Hovland and others in 1949.  </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Concept Explanation:</strong> The Sleeper Effect is a psychological phenomenon that comes into play when people are confronted with propaganda.  The concept is that people tend to not believe certain messages or information because of the low credibility of the source, but over time they forget the source and start believing the message, even if it is not true.  That delayed impact of the message is called the Sleeper Effect; and the low-credibility source is called a Discounting Cue. </p>
+		          <p>&nbsp;</p>
+			        <p>Thus, a persuasive message, paired with a discounting cue, causes an individual to be more persuaded by the message over time even if it was dismissed off initially. Further studies showed that people tended to “forget” the discounting cue over time and “dissociated” themselves from the message because of the eventual “differential decay” of the cue over time. This is because the impact of the cue decays faster than the impact of the message when the cue follows the message rather than precede it.</p>
+		          <p>&nbsp;</p>
+                    <p><strong>Further reading: </strong></p>
+                    <p>&nbsp;</p>
+              		<a href="http://en.wikipedia.org/wiki/Sleeper_effect" target="_blank">Link 1</a><br>
+	          		<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3100161/" target="_blank">Link 2</a><br>
+	          		<a href="http://lifehacker.com/5707484/persuasion-the-sleeper-effect" target="_blank">Link 3</a><br>
+	          		<a href="http://www.jstor.org/discover/10.2307/2488970?uid=3738256&uid=2129&uid=2&uid=70&uid=4&sid=21102608488743" target="_blank">Link 4</a><br>
+              		<a href="http://www.fisherhouse.com/courses/2009/09/monicas-concepts-blog.html" target="_blank">Link 5</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+             <li class="acc-header2" id="sct"> 
+		        <a href="#sct">Social Cognitive Theory </a>
+		        <div class="acc-content">
+                 <div class="imagePanel"><img src="assets/images/bandura.png" alt="Bandura" ><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Albert Bandura advanced this theory in 1986, although the theory has been developed from the 1941 theory of social learning put forward by Neal E. Miller and John Dollard. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Social Cognitive Theory sets out a view that people are self-organizing, self-regulating, self-reflecting and proactive beings rather than reactive beings. The theory advances the view that human functioning is a result of the coming together of personal, behavioral and environmental influences. In a more practical sense, the theory may be understood as saying that people learn by watching what others do. Or in other words, it revolves around the process of learning through observation. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> Social Cognitive Theory can be applied to areas of public health, education, marketing and mass media. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Social_cognitive_theory" target="_blank">Link 1</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Health%20Communication/Social_cognitive_theory.doc/" target="_blank">Link 2</a><br>
+			        <a href="http://sph.bu.edu/otlt/MPH-Modules/SB/SB721-Models/SB721-Models5.html" target="_blank">Link 3</a><br>
+			        <a href="http://www.uky.edu/~eushe2/Bandura/Bandura1999HP.pdf" target="_blank">Link 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+       		
+            <li class="acc-header" id="socialcapital"> 
+		        <a href="#socialcapital">Social Capital</a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/putnam.png" width="75%" alt="Putnam"></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> In his nonfiction book, 'Bowling Alone: The Collapse and Revival of American Community', Robert D. Putnam discusses the decline of 'social capital' in the United States of America since 1950. He believes that the foundation on which Ameraca was built, that of social capital, has eroded leading to lesser civic engagement which is ideally required by a strong democracy. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Concept Explanation:</strong> Putnam has used the game of bowling as an example to explain his concept. He says that though the number of people engaged in bowling has increased, the number of people participating in league games (teams) has decreased. Putnam uses this example to highlight the increasing disengagement of Americans in civic and social issues. Though the number of people participating in events has increased, they do so on an individual basis, for individual satisfaction. </p>
+			        <p>&nbsp;</p>
+			        <p>The concept of 'community' has eroded.   Putnam also says that television and urban sprawl have had a significant role in making America far less 'connected'. Putnam believes that social capital can be measured by the amount of trust and &quot;reciprocity&quot; in a community or between individuals   In Coleman's conception, social capital is a neutral resource that facilitates any manner of action, but whether society is better off as a result depends entirely on the individual uses to which it is put. According to Putnam and his followers, social capital is a key component to building and maintaining democracy.   </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Relevance:</strong> In the post-modern world, there sems to be progressively diminishing social capital. However, the concept of social capital can be quite relevant in social studies and also in Public Relations</p>
+			        <p>&nbsp;</p>
+                    <p><strong>Further reading: </strong></p>
+                    <p>&nbsp;</p>
+                  <a href="http://en.wikipedia.org/wiki/Social_capital" target="_blank">Link 1</a><br>
+                  <a href="http://www.socialcapitalresearch.com/literature/definition.html" target="_blank">Link 2</a><br>
+                  <a href="http://infed.org/mobi/robert-putnam-social-capital-and-civic-community/" target="_blank">Link 3</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Robert_D._Putnam" target="_blank">Link 4</a><br>
+                  <a href="http://en.wikipedia.org/wiki/Bowling_Alone" target="_blank">Link 5</a><br>
+                  <a href="http://www.academia.edu/196236/Bowling_together_-_applying_Robert_Putnams_theories_of_community_and_social_capital_to_public_relations" target="_blank">Link 6</a><br>
+		        </div>
+		    </li>
+            
+             
+             
+            <li class="acc-header2" id="sit"> 
+		        <a href="#sit">Social Identity Theory </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/tajfel.png" alt="Tajfel" ><br></div>
+			        <p><strong>Theorist:</strong> Henri Tajfel propounded this theory in 1979 </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Based in psychology, Social Identity Theory is about an individual's sense of who they are based on the social group they belong to, like the family, the club, a sports team, social class, etc.   </p>
+			        <p>&nbsp;</p>
+			        <p>People not only find comfort in 'belonging' to a social group or a similar class of people, but also, in order to perpetuate a sense of self-image, they tend to enhance the status of the group to which they belong. The downside is that people tend to discriminate against the groups that they see as 'other'. In fact, the theory was originally developed to understand the psychological basis of intergroup discrimination. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> Social Identity Theory helps to explain prejudices in society, racism, genocide, ethnic clashes, stereotyping, etc. The theory’s relevance is especially seen in understanding online behavior of people on social networking sites. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+                     <a href="http://en.wikipedia.org/wiki/Social_identity_theory" target="_blank">Link 1</a><br>
+			         <a href="http://www.simplypsychology.org/social-identity-theory.html" target="_blank">Link 52</a><br>
+			         <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Interpersonal%20Communication%20and%20Relations/Social_Identity_Theory.doc/" target="_blank">Link 3</a><br>
+			         <a href="http://wat2146.ucr.edu/papers/00a.pdf" target="_blank">Link 3</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            <li class="acc-header" id="sat"> 
+		        <a href="#sat">Speech Act Theory </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/ludvig.png" alt="Ludwig" ><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Ludwig Wittgenstein and J. L. Austin laid the foundations for the Speech Act Theory, although the contemporary theory is credited to Austin and later to John Searle. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> Speech Act is a technical term in linguistics and talks about its performative function in language and communication.    </p>
+			        <p>&nbsp;</p>
+			        <p>Austin analyzed speech acts on three levels:  <br>
+		            1) Locutionary Act (an utterance or a general statement that conveys some meaning);  <br>
+		            2) Illocutionary Act (the performance of an act in uttering something or where the speech itself is an act which have been termed as directives, commissives, expressives and declaratives); and  <br>
+		            3) Perlocutionary Act (where the intention of speech is to change someone's mind like inspirational or persuasive speech)</p>
+			        <p>&nbsp; </p>
+			        <p><strong>Theory Application/Relevance:</strong> Speech Act Theory helps in understanding organizational language, to improve communication by reducing the scope of misunderstandings, and so on. </p>
+		          <p>&nbsp;</p>
+			       <p><strong>Further reading: </strong></p>
+			       <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Speech_act" target="_blank">Link 1</a><br>
+			        <a href="http://www.carla.umn.edu/speechacts/definition.html" target="_blank">Link 2</a><br>
+			        <a href="http://www-01.sil.org/linguistics/GlossaryOfLinguisticTerms/WhatIsASpeechAct.htm" target="_blank">Link 3</a><br>
+			        <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Interpersonal%20Communication%20and%20Relations/Speech_Act_Theory.doc/" target="_blank">Link 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            
+            
+            
+             <li class="acc-header2" id="urt"> 
+		        <a href="#urt">Uncertainty Reduction Theory </a>
+		        <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/berger.png" alt="Berger" ><br></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Charles Berger and Richard Calabrese developed the Uncertainty Reduction Theory (URT) in 1975 </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Theory Explanation:</strong> URT is an interpersonal communications theory. It talks of how people use various communication tactics when meeting new people or forming new relationships, to reduce the uncertainty about their behavior and what the other person thinks of them.    </p>
+			        <p>&nbsp;</p>
+			        <p>There are three ways people seek information about another person to reduce uncertainty:  <br>
+		            (1) Passive strategies (where we observe the other person without making that person aware of being observed);  <br>
+		            (2) Active strategies (where we ask others about the person); and  <br>
+		            (3) Interactive strategies (where we directly approach the person we are interested in).. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> URT applies to any given social set up or in organizational set ups. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20clusters/Interpersonal%20Communication%20and%20Relations/Uncertainty_Reduction_Theory.doc/" target="_blank">Link 1</a><br>
+			        <a href="http://oregonstate.edu/instruct/theory/ur.html" target="_blank">Link 2</a><br>
+			        <a href="http://en.wikibooks.org/wiki/Communication_Theory/Uncertainty_Reduction" target="_blank">Link 3</a><br>
+			        <a href="http://www.academia.edu/2942637/Uncertainty_Reduction_Theory" target="_blank">Link 4</a><br>
+		          </p>
+		            <p>&nbsp;</p>
+		        </div>
+		    </li>
+            
+            <li class="acc-header" id="uandg"> 
+		        <a href="#uandg">Uses and Gratifications Theory </a>
+		        <div class="acc-content">
+               	  <div class="imagePanel"><img src="assets/images/katzblumler.png" alt="Jay Blumler and Elihu Katz" ></div>
+			        <p>&nbsp;</p>
+			        <p><strong>Theorist:</strong> Elihu Katz and Blumler formalized the theory in 1974 although the basis for this media effects theory can be found in theories as far back as the 1940s. </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Theory Explanation: </strong>This is one of the important media theories at it is one of the first concepts to involve the audiences in its study. The Uses and Gratifications Theory says that far from being passive, mass media users are active users of media; they expect to see what they want to see while discarding whatever is of no use to them. The theory emphasizes a limited effect position, which says people use and choose certain media forms over others, and are able to exercise control over their media.</p>
+			        <p>&nbsp;</p>
+			        <p>The theory further says that audience uses the media to fulfill five basic needs: </p>
+			        <p>(1) Cognitive (you choose the medium that gratifies you the most); </p>
+			        <p>(2) Affective needs (satisfying emotions, pleasure, etc); </p>
+			        <p>(3) Personal integrative needs (for social status, credibility, etc.); </p>
+			        <p>(4) Social integrative needs (time spent with family and friends); and </p>
+			        <p>(5) Tension Release needs (to escape or divert mind from every day tensions). </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Critique of Theory:</strong> Critics say this theory lets the media off the hook without making it accountable by saying it serves the audience what it wants. </p>
+			        <p>&nbsp;</p>
+			        <p><strong>Theory Application/Relevance:</strong> Applies to all media effects research </p>
+		          <p>&nbsp;</p>
+			        <p><strong>Further reading: </strong></p>
+			        <p>&nbsp;</p>
+                    <a href="http://en.wikipedia.org/wiki/Uses_and_gratifications_theory" target="_blank">Link 1</a><br>
+					<a href="http://www.aber.ac.uk/media/Documents/short/usegrat.html" target="_blank">Link 2</a><br>
+					<a href="https://umdrive.memphis.edu/cbrown14/public/Mass%20Comm%20Theory/Week%207%20Uses%20and%20Gratifications/Ruggiero.pdf" target="_blank">Link 3</a><br>
+					<a href="http://www.utwente.nl/cw/theorieenoverzicht/Theory%20Clusters/Mass%20Media/Uses_and_Gratifications_Approach.doc/" target="_blank">Link 4</a><br>
+                    <p>&nbsp;</p>
+		        </div>
+		    </li>
+     
+     
+            <li class="acc-header2" id="schramm"> 
+		        <a href="#schramm">Wilbur Schramm Model</a>    
+	          <div class="acc-content">
+                <div class="imagePanel"><img src="assets/images/schramm.png" alt="Wilbur Schramm" width="75%"></div>
+		        <p>&nbsp;</p>
+			        <p><strong>The Wilbur Schramm model </strong><br>
+			          <br>
+			          This is a basic model to explain the process of communication. It contends that the sender as well as the receiver of messages are encoders as well as decoders and that the communication process completes a circle when the message is encoded, sent, decoded and sent back again for decoding by the original sender. This model signifies a two-way communication model. <br>
+			          <br>
+                      <div class="imagePanel"><img src="assets/images/shrammmodel.jpg" width="90%" alt="Schramm's Model"></div>
+                      <br>
+			          Thus, communication process involves information transmission, and is governed by three levels of semiotic rules: 	<br>
+			          1. Syntactic (formal properties of signs and symbols), 	<br>
+			          2. Pragmatic (concerned with the relations between signs / expressions and their users) and 	<br>
+			          3.	Semantic (study of relationships between signs and symbols and what they represent).<br>
+			          <br>
+			        </p>
+			        <p>
+		         	<strong>Links for more reading: </strong>                    
+			        <p><br>
+			          <a href="http://en.wikipedia.org/wiki/Wilbur_Schramm" target="_blank">Link 1</a><br>
+			          <a href="http://www.managementstudyguide.com/schramm-model-of-communication.htm" target="_blank">Link 2</a><br>
+			          <a href="http://knowledge.sagepub.com/view/key-concepts-in-marketing/n46.xml" target="_blank">Link 3</a><br>
+			          <a href="http://en.wikipedia.org/wiki/Models_of_communication" target="_blank">Link 4</a><br>
+			          <a href="http://www.uri.edu/personal/carson/kulveted/wlsmodel.html" target="_blank">Link 5</a><br>
+	            <p>&nbsp;</p>
+	          </div>
+		    </li>
+          
+          <li class="acc-header5" id="home"> 
+		        <a href="index.html">Main Menu</a>
+		    </li>
+            
+            <li class="acc-header5" id="early"> 
+		        <a href="early.html">Some Models and Early Theorists</a>
+		    </li>
+            
+            <li class="acc-header5" id="comm">
+		        <a href="communication.html">Interpersonal Communication</a>
+		    </li>
+            
+            <li class="acc-header5" id="audi">
+		        <a href="audiences.html">Audiences and Societies</a>
+		    </li>
+            
+            <li class="acc-header5" id="media">
+		        <a href="media.html">Media Theories</a>
+		    </li>
+            
+            <li class="acc-header5" id="effects"> 
+		        <a href="effects.html">Media Effects</a>
+		    </li>
+            
+            <li class="acc-header5" id="org"> 
+		        <a href="organization.html">Organizational Communication</a>
+		    </li>
+            
+            <li class="acc-header5" id="alpha"> 
+		        <a href="a2z.html">Alphabetical List</a>
+		    </li>
+        	
+            <li class="acc-header5" id="alpha"> 
+		        <a href="http://www.karandikars.com/" target="_blank">About the developer</a></li>
+            
+		</ul>
+	</div>
+  </body>
+</html>
