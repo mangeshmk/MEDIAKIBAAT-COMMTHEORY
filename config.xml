@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-	
-<widget id="com.mediakibaat.app" 
-version="1.0.0" 
-xmlns="http://www.w3.org/ns/widgets" 
-xmlns:gap="http://phonegap.com/ns/1.0">
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.edusanchar.tybmmdigimedia"
+    version   = "3.0.1">
 
 
-<name>MEDIAKIBAAT</name>
+<name>MediaKiBaat</name>
 
 <description>
 An app for all media students for quick learning of Communication and Media Theories
