@@ -25,7 +25,6 @@ Dr. Mangesh Karandikar
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
     -->
-    <uses-permission android:name="android.permission.INTERNET" />
 
  <!-- Customize your app and platform with the preference element. -->
     <preference name="phonegap-version"           value="cli-6.5.0" />          <!-- all: current version of PhoneGap -->
