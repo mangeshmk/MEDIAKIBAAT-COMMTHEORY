@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-	
-<widget xmlns = "http://www.w3.org/ns/widgets"
-	xmlns:android="http://schemas.android.com/apk/res/android"
-    id        = "com.mediakibaat.commtheory"
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.mediakibaat.commtheory"
     versionCode = "10"
-	version   = "3.0.1">
+    version     = "1.0.0" >
 
 
-<name>MEDIAKIBAAT-COMMTHEORY</name>
+<name>MEDIAKIBAAT COMMTHEORY</name>
 
 <description>
 An app for all media students for quick learning of Communication and Media Theories
