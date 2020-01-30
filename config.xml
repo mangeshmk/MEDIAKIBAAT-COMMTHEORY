@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<widget xmlns = "http://www.w3.org/ns/widgets"
-    xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "com.mediakibaat.commtheory"
-    versionCode = "10"
-	version   = "3.0.1">
+	
+<widget id="io.cordova.hellocordova" version="0.0.1" 
+	xmlns="http://www.w3.org/ns/widgets" 
+	xmlns:cdv="http://cordova.apache.org/ns/1.0">
 
-
-<name>MEDIAKIBAAT COMMTHEORY</name>
+<name>MEDIAKIBAAT-COMMTHEORY</name>
 
 <description>
 An app for all media students for quick learning of Communication and Media Theories
