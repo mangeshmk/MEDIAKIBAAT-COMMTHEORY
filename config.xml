@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "com.edusanchar.tybmmdigimedia"
-    version   = "3.0.1">
+    id        = "com.karandikars.commth"
+    version   = "1.0.0">
 
-
-<name>MediaKiBaat</name>
+<name>Tejapps - Comm Theories</name>
 
 <description>
 An app for all media students for quick learning of Communication and Media Theories
@@ -15,8 +14,6 @@ An app for all media students for quick learning of Communication and Media Theo
 Dr. Mangesh Karandikar
 </author>
 
-	
-	
 <!--
         Enable individual API permissions here.
         The "device" permission is required for the 'deviceready' event.
@@ -31,7 +28,7 @@ Dr. Mangesh Karandikar
     <uses-permission android:name="android.permission.INTERNET" />
 
  <!-- Customize your app and platform with the preference element. -->
-    <preference name="phonegap-version" 		  value="cli-6.5.0" />          <!-- all: current version of PhoneGap -->
+    <preference name="phonegap-version"           value="cli-6.5.0" />          <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
